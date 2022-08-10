@@ -1,2 +1,8 @@
 # SQLados
-O repositório git do gruo SQLados da disciplina DBI na turma de 2022
+1. Introdução
+
+2. Descrição Geral
+
+3. Usuário
+
+4. Funcionalidades do sistema
