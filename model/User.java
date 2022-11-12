@@ -1,5 +1,17 @@
 package model;
 
+
+/*
+ * This class is used to create a user object
+ * 
+ * @param login
+ * @param password 
+ * @param name
+ * @param department
+ * @param birthDate
+ * @param CPF
+ */
+
 public class User{
 
   private String login;
