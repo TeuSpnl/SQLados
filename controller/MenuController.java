@@ -10,11 +10,13 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 public class MenuController implements Initializable {
 
@@ -60,10 +62,19 @@ public class MenuController implements Initializable {
   @FXML
   private TextField userCPFTextField;
 
+  @FXML
+  private AnchorPane fatherPane;
+
+  @FXML
+  private BorderPane borderPane;
+
+
   private boolean sidebarOpen = false;
 
   private boolean sideBarSearch = false;
   private boolean sidebarLog = false;
+
+  private String panelValue = "";
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -111,13 +122,12 @@ public class MenuController implements Initializable {
     });
 
     cadastrarUsuarioButton.setOnAction(event -> {
-      cadastrarUsuarioAnchor.setVisible(true);
+      setCenter("/view/register/user_view.fxml");
     });
 
   }
 
   private void openSidebar() {
-
     TranslateTransition slide = new TranslateTransition();
     slide.setDuration(javafx.util.Duration.seconds(0.3));
     slide.setNode(menuSlider);
@@ -135,10 +145,19 @@ public class MenuController implements Initializable {
     slide.setToX(-200);
     slide.play();
     menuSlider.setTranslateX(0);
-
     slide.setOnFinished((ActionEvent e) -> {
-
     });
+  }
+
+  private void setCenter(String value){
+    try {
+      AnchorPane view = FXMLLoader.load(getClass().getResource(value));
+      borderPane.setCenter(view);
+
+    } catch (Exception e) {
+
+    }
+
   }
 
 }

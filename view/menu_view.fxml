@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,13 +8,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #00b2e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
-      <BorderPane layoutY="-1.0" prefHeight="720.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="borderPane" layoutY="-1.0" prefHeight="720.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="85.0" prefWidth="1200.0" style="-fx-background-color: #4a4e69;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="85.0" prefWidth="1200.0" style="-fx-background-color: #00aede;" BorderPane.alignment="CENTER">
                <children>
-                  <Pane layoutX="313.0" layoutY="-54.0" prefHeight="58.0" prefWidth="1200.0" style="-fx-background-color: #2b2d42;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Pane layoutX="313.0" layoutY="-54.0" prefHeight="58.0" prefWidth="1200.0" style="-fx-background-color: #003e4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <Button fx:id="menuButton" alignment="BOTTOM_LEFT" layoutY="66.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="207.0" style="-fx-background-color: transparent;" text="Area de trabalho" textAlignment="CENTER" textFill="#030303" AnchorPane.leftAnchor="0.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
@@ -44,7 +41,7 @@
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane fx:id="menuSlider" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4a4e69;" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="menuSlider" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00aede;" BorderPane.alignment="CENTER">
                <children>
                   <AnchorPane fx:id="cadastrarSideBar" prefHeight="609.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -59,49 +56,7 @@
                </children></AnchorPane>
          </left>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8d99ae;" BorderPane.alignment="CENTER">
-               <children>
-                  <AnchorPane fx:id="cadastrarUsuarioAnchor" prefHeight="609.0" prefWidth="1000.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <TextField fx:id="userLoginTextField" layoutX="308.0" layoutY="120.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 100;" />
-                        <Label layoutX="201.0" layoutY="112.0" prefHeight="40.0" prefWidth="107.0" text="Login">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="201.0" layoutY="161.0" prefHeight="40.0" prefWidth="107.0" text="Senha">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="201.0" layoutY="60.0" prefHeight="40.0" prefWidth="107.0" text="Nome">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="userNameTextField" layoutX="308.0" layoutY="68.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 100;" />
-                        <TextField fx:id="userPasswordTextField" layoutX="308.0" layoutY="169.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 100;" />
-                        <Label layoutX="201.0" layoutY="208.0" prefHeight="40.0" prefWidth="107.0" text="Setor">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="userDepartmentTextField" layoutX="308.0" layoutY="216.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 100;" />
-                        <Label layoutX="36.0" layoutY="258.0" prefHeight="40.0" prefWidth="272.0" text="Data de nascimento">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <DatePicker fx:id="userDateTextField" layoutX="310.0" layoutY="266.0" prefHeight="25.0" prefWidth="242.0" />
-                        <Label layoutX="180.0" layoutY="307.0" prefHeight="40.0" prefWidth="107.0" text="CPF">
-                           <font>
-                              <Font size="28.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="userCPFTextField" layoutX="308.0" layoutY="314.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 100;" />
-                     </children>
-                  </AnchorPane>
-               </children></AnchorPane>
+            <AnchorPane fx:id="fatherPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5f909e;" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>
