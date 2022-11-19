@@ -45,7 +45,37 @@
                <children>
                   <AnchorPane fx:id="cadastrarSideBar" prefHeight="609.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="cadastrarUsuarioButton" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="36.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar usuario" textFill="#030303">
+                        <Button fx:id="cadastrarUsuarioButton" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="36.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Usuario" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarEquipamento" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="75.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Equipamento" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarSetor" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="114.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Setor" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarOrdem" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="153.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Ordem" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarPaciente" alignment="BOTTOM_LEFT" layoutX="9.0" layoutY="192.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Paciente" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarPrestador" alignment="BOTTOM_LEFT" layoutX="9.0" layoutY="241.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Prestador" textFill="#030303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cadastrarConvenio" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="285.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Convenio" textFill="#030303">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>

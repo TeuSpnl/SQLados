@@ -21,6 +21,9 @@ import javafx.scene.layout.BorderPane;
 public class MenuController implements Initializable {
 
   @FXML
+  private BorderPane borderPane;
+
+  @FXML
   private Button menuButton;
 
   @FXML
@@ -39,34 +42,28 @@ public class MenuController implements Initializable {
   private Button cadastrarUsuarioButton;
 
   @FXML
+  private Button cadastrarEquipamento;
+
+  @FXML
+  private Button cadastrarSetor;
+
+  @FXML
+  private Button cadastrarOrdem;
+
+  @FXML
+  private Button cadastrarPaciente;
+
+  @FXML
+  private Button cadastrarPrestador;
+
+  @FXML
+  private Button cadastrarConvenio;
+
+  @FXML
   private AnchorPane pesquisarSideBar;
 
   @FXML
-  private AnchorPane cadastrarUsuarioAnchor;
-
-  @FXML
-  private TextField userLoginTextField;
-
-  @FXML
-  private TextField userNameTextField;
-
-  @FXML
-  private TextField userPasswordTextField;
-
-  @FXML
-  private TextField userDepartmentTextField;
-
-  @FXML
-  private DatePicker userDateTextField;
-
-  @FXML
-  private TextField userCPFTextField;
-
-  @FXML
   private AnchorPane fatherPane;
-
-  @FXML
-  private BorderPane borderPane;
 
 
   private boolean sidebarOpen = false;
@@ -124,6 +121,32 @@ public class MenuController implements Initializable {
     cadastrarUsuarioButton.setOnAction(event -> {
       setCenter("/view/register/user_view.fxml");
     });
+
+    cadastrarEquipamento.setOnAction(event -> {
+      setCenter("/view/register/equipment_view.fxml");
+    });
+
+    cadastrarSetor.setOnAction(event -> {
+      setCenter("/view/register/sector_view.fxml");
+    });
+
+    cadastrarOrdem.setOnAction(event -> {
+      setCenter("/view/register/order_view.fxml");
+    });
+
+    cadastrarPaciente.setOnAction(event -> {
+      setCenter("/view/register/patient_view.fxml");
+    });
+
+    cadastrarPrestador.setOnAction(event -> {
+      setCenter("/view/register/provider_view.fxml");
+    });
+
+    cadastrarConvenio.setOnAction(event -> {
+      setCenter("/view/register/contract_view.fxml");
+    });
+
+    
 
   }
 
