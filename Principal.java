@@ -56,7 +56,7 @@ public class Principal extends Application {
 
       primaryStage.getIcons().add(new Image("img/icon.png"));
       primaryStage.setResizable(false);
-      primaryStage.setTitle("Hospital ideal");
+      primaryStage.setTitle("");
       primaryStage.setScene(scene);
       primaryStage.sizeToScene();
       primaryStage.show();

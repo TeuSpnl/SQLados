@@ -74,45 +74,16 @@ public class MenuController implements Initializable {
   private boolean sideBarSearch = false;
   private boolean sidebarLog = false;
 
-  private String panelValue = "";
-
   @Override
   public void initialize(URL location, ResourceBundle resources) {
 
     /*
      * MENU BUTTON METHODS ****************************************************
      */
-    menuSlider.setTranslateX(-220);
+    // menuSlider.setTranslateX(-220);
+    fatherPane.setTranslateX(-220);
 
-    pesquisarButton.setOnAction(Event -> {
-      
-      cadastrarSideBar.setVisible(false);
-      pesquisarSideBar.setVisible(true);
-
-      if(!sideBarSearch && sidebarOpen){
-        sideBarSearch = true;
-        sidebarLog = false;
-        return;
-      }
-
-      if (sidebarOpen) {
-        closeSidebar();
-      } else {
-        openSidebar();
-      }
-      sidebarOpen = !sidebarOpen;
-    });
-
-    cadastrarButton.setOnAction(Event -> {
-
-      cadastrarSideBar.setVisible(true);
-      pesquisarSideBar.setVisible(false);
-
-      if(!sidebarLog && sidebarOpen){
-        sidebarLog = true;
-        sideBarSearch = false;
-        return;
-      }
+    menuButton.setOnAction(event -> {
       if (sidebarOpen) {
         closeSidebar();
       } else {
@@ -160,10 +131,10 @@ public class MenuController implements Initializable {
   private void openSidebar() {
     TranslateTransition slide = new TranslateTransition();
     slide.setDuration(javafx.util.Duration.seconds(0.3));
-    slide.setNode(menuSlider);
+    slide.setNode(fatherPane);
     slide.setToX(0);
     slide.play();
-    menuSlider.setTranslateX(-200);
+    fatherPane.setTranslateX(-200);
     slide.setOnFinished((ActionEvent e) -> {
     });
   }
@@ -171,10 +142,10 @@ public class MenuController implements Initializable {
   private void closeSidebar() {
     TranslateTransition slide = new TranslateTransition();
     slide.setDuration(javafx.util.Duration.seconds(0.3));
-    slide.setNode(menuSlider);
+    slide.setNode(fatherPane);
     slide.setToX(-220);
     slide.play();
-    menuSlider.setTranslateX(0);
+    fatherPane.setTranslateX(0);
     slide.setOnFinished((ActionEvent e) -> {
     });
   }
