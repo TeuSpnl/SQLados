@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,8 +15,8 @@
          <top>
             <AnchorPane prefHeight="85.0" prefWidth="1200.0" style="-fx-background-color: #00aede;" BorderPane.alignment="CENTER">
                <children>
-                  <Pane layoutX="313.0" layoutY="-54.0" prefHeight="58.0" prefWidth="1200.0" style="-fx-background-color: #003e4f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button fx:id="menuButton" alignment="BOTTOM_LEFT" layoutY="66.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="207.0" style="-fx-background-color: transparent;" text="Area de trabalho" textAlignment="CENTER" textFill="#030303" AnchorPane.leftAnchor="0.0">
+                  <Pane layoutX="313.0" layoutY="-54.0" prefHeight="22.0" prefWidth="1200.0" style="-fx-background-color: BLACK;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Button fx:id="menuButton" alignment="BOTTOM_LEFT" layoutY="30.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="207.0" style="-fx-background-color: transparent;" text="Area de trabalho" textAlignment="CENTER" textFill="#030303" AnchorPane.leftAnchor="0.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -27,12 +28,12 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="cadastrarButton" alignment="BOTTOM_LEFT" layoutX="207.0" layoutY="69.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: transparent;" text="Cadastrar" textFill="#030303">
+                  <Button fx:id="cadastrarButton" alignment="BOTTOM_LEFT" layoutX="207.0" layoutY="34.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: transparent;" text="Cadastrar" textFill="#030303">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="pesquisarButton" layoutX="356.0" layoutY="69.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Pesquisar" textFill="#030303">
+                  <Button fx:id="pesquisarButton" alignment="BOTTOM_LEFT" layoutX="379.0" layoutY="34.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Pesquisar" textFill="#030303">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -41,52 +42,69 @@
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane fx:id="menuSlider" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00aede;" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="menuSlider" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="cadastrarSideBar" prefHeight="609.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="cadastrarSideBar" prefHeight="609.0" prefWidth="200.0" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="cadastrarUsuarioButton" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="36.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Usuario" textFill="#030303">
+                        <Button fx:id="cadastrarUsuarioButton" alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Usuario" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarEquipamento" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="84.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Equipamento" textFill="#030303">
+                        <Button fx:id="cadastrarEquipamento" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Equipamento" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarSetor" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="123.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Setor" textFill="#030303">
+                        <Button fx:id="cadastrarSetor" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Setor" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarOrdem" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Ordem" textFill="#030303">
+                        <Button fx:id="cadastrarOrdem" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Ordem" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarPaciente" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="209.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Paciente" textFill="#030303">
+                        <Button fx:id="cadastrarPaciente" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="201.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Paciente" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarPrestador" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="248.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Prestador" textFill="#030303">
+                        <Button fx:id="cadastrarPrestador" alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="240.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Prestador" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="cadastrarConvenio" alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="305.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Convenio" textFill="#030303">
+                        <Button fx:id="cadastrarConvenio" alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="279.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" style="-fx-background-color: transparent;" text="Cadastrar Convenio" textFill="#030303">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
+                        <Label layoutX="34.0" layoutY="7.0" prefHeight="18.0" prefWidth="149.0" text="Cadastros" textFill="#0a0a0a">
+                           <font>
+                              <Font name="System Bold Italic" size="26.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="pesquisarSideBar" layoutX="10.0" layoutY="10.0" prefHeight="619.0" prefWidth="210.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children></AnchorPane>
          </left>
          <center>
-            <AnchorPane fx:id="fatherPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5f909e;" BorderPane.alignment="CENTER" />
+            <AnchorPane fx:id="fatherPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="658.0" fitWidth="1061.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/menu/back.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="171.0" layoutY="101.0" prefHeight="85.0" prefWidth="517.0" text="Você doente é o nosso emprego" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
          </center>
       </BorderPane>
    </children>
