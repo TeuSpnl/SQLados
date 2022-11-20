@@ -69,9 +69,9 @@ public class ServiceProviderDao extends ServiceProvider {
 
     public model.ServiceProvider getPSV(String code){
         model.ServiceProvider psv = new ServiceProvider();
-        String sql = "SELECT *" +
-                    "FROM PSV" +
-                    "WHERE PSV_COD= '?'";
+        String sql = "SELECT * " +
+                    "FROM PSV " +
+                    "WHERE PSV_COD = '?'";
 
         try{
             Connection con = new ConnectionFactory().getConnection();

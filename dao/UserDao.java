@@ -11,7 +11,7 @@ import model.User;
 public class UserDao extends User {
 
   public static void register(String login, String password, String name, String sector, String birth, String CPF){
-        String sql = "INSERT INTO USR" +
+        String sql = "INSERT INTO USR " +
                     "VALUES (?,?,?,?,?,?);";
 
         try{
@@ -34,7 +34,7 @@ public class UserDao extends User {
 
     public static List<model.User> getAll(){
         List<model.User> users = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM USR";
 
         try{
@@ -81,9 +81,8 @@ public class UserDao extends User {
             smt.setString(1, login.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
             rs.next();
-                 user.setLogin(rs.getString("USR_LOGIN"));   
+                user.setLogin(rs.getString("USR_LOGIN"));   
                 user.setPassword(rs.getString("USR_SENHA"));
-                System.out.println(user.getPassword());
                 user.setName(rs.getString("USR_NOME"));
                 user.setDepartment(rs.getString("USR_STR_COD"));
                 user.setBirthDate(rs.getString("USR_BIRTH"));
@@ -97,7 +96,6 @@ public class UserDao extends User {
             System.out.println("Error ao Buscar o Usuario!");
             System.out.println(e.getMessage());
         }
-
         return user;
     }
 

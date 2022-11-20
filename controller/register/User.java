@@ -1,11 +1,16 @@
 package controller.register;
+import dao.UserDao;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class User {
+public class User implements Initializable{
 
     @FXML
     private TextField nameField;
@@ -27,5 +32,26 @@ public class User {
 
     @FXML
     private Button registerButton;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        //register the user
+        registerButton.setOnAction(Event -> {
+            String name = nameField.getText();
+            String login = loginField.getText();
+            String password = passwordField.getText();
+            String department = departmentField.getText();
+            String birth = datePanel.getValue().toString();
+            System.out.println(birth);
+            String cpf = CPFfield.getText();
+    
+            try {
+              dao.UserDao.register(login, password, name, department, birth, cpf);
+            } catch (Exception e) {
+              System.out.println("Cant login in, try being a better programmer");
+            }
+          });
+    }
 
 }
