@@ -82,7 +82,7 @@ public class MenuController implements Initializable {
     /*
      * MENU BUTTON METHODS ****************************************************
      */
-    menuSlider.setTranslateX(-200);
+    menuSlider.setTranslateX(-220);
 
     pesquisarButton.setOnAction(Event -> {
       
@@ -155,9 +155,6 @@ public class MenuController implements Initializable {
 
 
 
-
-
-
   }
 
   private void openSidebar() {
@@ -175,7 +172,7 @@ public class MenuController implements Initializable {
     TranslateTransition slide = new TranslateTransition();
     slide.setDuration(javafx.util.Duration.seconds(0.3));
     slide.setNode(menuSlider);
-    slide.setToX(-200);
+    slide.setToX(-220);
     slide.play();
     menuSlider.setTranslateX(0);
     slide.setOnFinished((ActionEvent e) -> {
