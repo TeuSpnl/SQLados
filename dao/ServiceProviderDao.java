@@ -11,7 +11,7 @@ import model.ServiceProvider;
 public class ServiceProviderDao extends ServiceProvider {
 
   public static void register(int code, String name, Long CPF, String council, String type, String UF){
-        String sql = "INSERT INTO PSV" +
+        String sql = "INSERT INTO PSV " +
                     "VALUES (?,?,?,?,?,?)";
 
         try{
@@ -28,6 +28,7 @@ public class ServiceProviderDao extends ServiceProvider {
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
+            System.out.println(e.getMessage());
             System.out.println("Error ao Registrar o Prestador de Servico!");
         }
     }
