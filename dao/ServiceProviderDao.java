@@ -10,7 +10,7 @@ import model.ServiceProvider;
 
 public class ServiceProviderDao extends ServiceProvider {
 
-  public void register(String code, String name, String CPF, String council, String type, String UF){
+  public static void register(int code, String name, Long CPF, String council, String type, String UF){
         String sql = "INSERT INTO PSV" +
                     "VALUES (?,?,?,?,?,?)";
 
@@ -18,9 +18,9 @@ public class ServiceProviderDao extends ServiceProvider {
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, code);
+                smt.setInt(1, code);
                 smt.setString(2, name);
-                smt.setString(3,  CPF);
+                smt.setLong(3,  CPF);
                 smt.setString(4, council);
                 smt.setString(5, type);
                 smt.setString(6, UF);

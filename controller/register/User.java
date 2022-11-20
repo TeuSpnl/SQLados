@@ -45,12 +45,12 @@ public class User implements Initializable{
             int department = Integer.parseInt(departmentField.getText());
             Date birth = Date.valueOf(datePanel.getValue().toString());
             System.out.println(birth);
-            String cpf = CPFfield.getText();
+            Long cpf = Long.parseLong(CPFfield.getText());
     
             try {
-             // dao.UserDao.register(login, password, name, department, birth, cpf);
+                dao.UserDao.register(login, password, name, department, birth, cpf);
             } catch (Exception e) {
-              System.out.println("Cant login in, try being a better programmer");
+              System.out.println("Try being a better programmer");
             }
           });
     }

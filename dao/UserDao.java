@@ -12,25 +12,21 @@ import model.User;
 
 public class UserDao extends User {
 
-  public static void register(String login, String password, String name, int sector, Date birth, BigInteger CPF){
+  public static void register(String login, String password, String name, int sector, Date birth, Long CPF){
         String sql = "INSERT INTO USR " +
                     "VALUES (?,?,?,?,?,?);";
 
         try{
             Connection con = ConnectionFactory.getConnection();
-            System.out.println("Teste 1");
             PreparedStatement smt = con.prepareStatement(sql);
-            System.out.println("Teste 2");
 
                 smt.setString(1, login.toUpperCase());
                 smt.setString(2, password.toUpperCase());
                 smt.setString(3,  name.toUpperCase());
                 smt.setInt(4, sector);
                 smt.setDate(5, birth);
-                //smt.setLong(6, CPF);
-                System.out.println("Teste 3");
+                smt.setLong(6, CPF);
             smt.executeUpdate(); // Executa Comando no SQL
-            System.out.println("Teste 4");
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
