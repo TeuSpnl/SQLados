@@ -2,6 +2,7 @@ package controller.register;
 import dao.UserDao;
 
 import java.net.URL;
+import java.sql.Date;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -41,13 +42,13 @@ public class User implements Initializable{
             String name = nameField.getText();
             String login = loginField.getText();
             String password = passwordField.getText();
-            String department = departmentField.getText();
-            String birth = datePanel.getValue().toString();
+            int department = Integer.parseInt(departmentField.getText());
+            Date birth = Date.valueOf(datePanel.getValue().toString());
             System.out.println(birth);
             String cpf = CPFfield.getText();
     
             try {
-              dao.UserDao.register(login, password, name, department, birth, cpf);
+             // dao.UserDao.register(login, password, name, department, birth, cpf);
             } catch (Exception e) {
               System.out.println("Cant login in, try being a better programmer");
             }

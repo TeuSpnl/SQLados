@@ -1,6 +1,8 @@
 package dao;
 
+import java.math.BigInteger;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,24 +12,29 @@ import model.User;
 
 public class UserDao extends User {
 
-  public static void register(String login, String password, String name, String sector, String birth, String CPF){
+  public static void register(String login, String password, String name, int sector, Date birth, BigInteger CPF){
         String sql = "INSERT INTO USR " +
                     "VALUES (?,?,?,?,?,?);";
 
         try{
             Connection con = ConnectionFactory.getConnection();
+            System.out.println("Teste 1");
             PreparedStatement smt = con.prepareStatement(sql);
+            System.out.println("Teste 2");
 
                 smt.setString(1, login.toUpperCase());
                 smt.setString(2, password.toUpperCase());
                 smt.setString(3,  name.toUpperCase());
-                smt.setString(4, sector.toUpperCase());
-                smt.setString(5, birth.toUpperCase());
-                smt.setString(6, CPF.toUpperCase());
+                smt.setInt(4, sector);
+                smt.setDate(5, birth);
+                //smt.setLong(6, CPF);
+                System.out.println("Teste 3");
             smt.executeUpdate(); // Executa Comando no SQL
+            System.out.println("Teste 4");
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
+            System.out.println(e.getMessage());
             System.out.println("Error ao Registrar o Usuario!");
         }
     }
