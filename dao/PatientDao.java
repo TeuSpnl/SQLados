@@ -68,4 +68,36 @@ public class PatientDao extends Patient {
 
         return patients;
     }
+
+    public model.Patient getPatient(String record){
+        model.Patient pac = new Patient();
+        String sql = "SELECT *" +
+                    "FROM PAC" +
+                    "WHERE PAC_REG= '?'";
+
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement smt = con.prepareStatement(sql);
+            ResultSet rs;
+            
+            smt.setString(1, record.toUpperCase());
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+
+                pac.setRecord(rs.getString("PAC_REG"));
+                pac.setRecordDate(rs.getString("PAC_DTHR_REG"));
+                pac.setName(rs.getString("PAC_NOME"));
+                pac.setBirthDate(rs.getString("PAC_BIRTH"));
+                pac.setCPF(rs.getString("PAC_CPF"));
+                pac.setInsuranceCode(rs.getString("PAC_CNV_COD"));
+                pac.setPhone(rs.getString("PAC_TEL"));
+
+            rs.close(); // Finaliza os dados da Query
+            smt.close(); // Finaliza o PreparedStatement
+            con.close(); // Finaliza a Conexão com o BD
+        } catch (SQLException e){
+            System.out.println("Error ao Buscar o Paciente!");
+        }
+
+        return pac;
+    }
 }

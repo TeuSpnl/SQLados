@@ -62,4 +62,33 @@ public class EquipmentDao extends Equipment {
 
         return equipments;
     }
+
+    public model.Equipment getEquipment(String code){
+        model.Equipment eqp = new Equipment();
+        String sql = "SELECT *" +
+                    "FROM EQP" +
+                    "WHERE EQP_NUMERO = '?'";
+
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement smt = con.prepareStatement(sql);
+            ResultSet rs;
+            
+            smt.setString(1, code.toUpperCase());
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+
+                eqp.setNumber(rs.getString("EQP_NUMERO"));
+                eqp.setRegisterDate(rs.getString("EQP_DTHR_REGISTRO"));
+                eqp.setName(rs.getString("EQP_NOME"));
+                eqp.setDepartmentCode(rs.getString("EQP_STR_COD"));
+
+            rs.close(); // Finaliza os dados da Query
+            smt.close(); // Finaliza o PreparedStatement
+            con.close(); // Finaliza a Conexão com o BD
+        } catch (SQLException e){
+            System.out.println("Error ao Buscar o Equipamento!");
+        }
+
+        return eqp;
+    }
 }

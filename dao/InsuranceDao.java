@@ -58,4 +58,31 @@ public class InsuranceDao extends Insurance {
 
         return insurances;
     }
+
+    public model.Insurance getInsurance(String code){
+        model.Insurance cnv = new Insurance();
+        String sql = "SELECT *" +
+                    "FROM CNV" +
+                    "WHERE CNV_COD = '?'";
+
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement smt = con.prepareStatement(sql);
+            ResultSet rs;
+            
+            smt.setString(1, code.toUpperCase());
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+
+                cnv.setCode(rs.getString("CNV_COD"));
+                cnv.setName(rs.getString("CNV_NOME"));
+
+            rs.close(); // Finaliza os dados da Query
+            smt.close(); // Finaliza o PreparedStatement
+            con.close(); // Finaliza a Conexão com o BD
+        } catch (SQLException e){
+            System.out.println("Error ao Buscar o Convenio!");
+        }
+
+        return cnv;
+    }
 }

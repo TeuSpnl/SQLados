@@ -71,7 +71,7 @@ public class UserDao extends User {
         model.User user = new User();
         String sql = "SELECT *" +
                     "FROM USR" +
-                    "WHERE = '?'";
+                    "WHERE USER_LOGIN = '?'";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
@@ -106,5 +106,4 @@ public class UserDao extends User {
         }
         return false;
     }
-
 }

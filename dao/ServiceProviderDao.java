@@ -67,4 +67,35 @@ public class ServiceProviderDao extends ServiceProvider {
         return services;
     }
 
+    public model.ServiceProvider getPSV(String code){
+        model.ServiceProvider psv = new ServiceProvider();
+        String sql = "SELECT *" +
+                    "FROM PSV" +
+                    "WHERE PSV_COD= '?'";
+
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement smt = con.prepareStatement(sql);
+            ResultSet rs;
+            
+            smt.setString(1, code.toUpperCase());
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+
+                psv.setCode(rs.getString("PSV_COD"));
+                psv.setName(rs.getString("PSV_NOME"));
+                psv.setCPF(rs.getString("PSV_CPF"));
+                psv.setCouncil(rs.getString("PSV_CONSELHO"));
+                psv.setType(rs.getString("PSV_TIPO"));
+                psv.setUF(rs.getString("PSV_UF"));
+
+            rs.close(); // Finaliza os dados da Query
+            smt.close(); // Finaliza o PreparedStatement
+            con.close(); // Finaliza a Conexão com o BD
+        } catch (SQLException e){
+            System.out.println("Error ao Buscar o Prestador de Servico!");
+        }
+
+        return psv;
+    }
+
 }

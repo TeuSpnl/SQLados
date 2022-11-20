@@ -71,4 +71,36 @@ public class OrderOfServiceDao extends OrderOfService {
         return orders;
     }
 
+    public model.OrderOfService getOS(String number){
+        model.OrderOfService os = new OrderOfService();
+        String sql = "SELECT *" +
+                    "FROM OS" +
+                    "WHERE OS_NUMERO = '?'";
+
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement smt = con.prepareStatement(sql);
+            ResultSet rs;
+            
+            smt.setString(1, number.toUpperCase());
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+
+                os.setNumber(rs.getString("OS_NUMERO"));
+                os.setPatientRecord(rs.getString("OS_PAC_REG"));
+                os.setDateAndHour(rs.getString("OS_DTHR"));
+                os.setReferringDoctor(rs.getString("OS_REQUISITANTE"));
+                os.setDepartment(rs.getString("OS_STR_COD"));
+                os.setTypeOfservice(rs.getString("OS_TIPO_ATEND"));
+                os.setResponsibleUser(rs.getString("OS_USR_RESP"));
+                os.setInsurance(rs.getString("OS_CNV_COD"));
+
+            rs.close(); // Finaliza os dados da Query
+            smt.close(); // Finaliza o PreparedStatement
+            con.close(); // Finaliza a Conexão com o BD
+        } catch (SQLException e){
+            System.out.println("Error ao Buscar a Ordem de Servico!");
+        }
+
+        return os;
+    }
 }
