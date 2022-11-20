@@ -10,57 +10,33 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #00b2e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #232323;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
       <BorderPane fx:id="borderPane" layoutY="-1.0" prefHeight="720.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="65.0" prefWidth="1264.0" style="-fx-background-color: #171717;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="cadastrarButton" alignment="BOTTOM_LEFT" layoutX="523.0" layoutY="13.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" style="-fx-background-color: transparent;" text="Cadastrar" textFill="WHITE">
+                  <Button fx:id="menuButton" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: #2d68ff; -fx-background-radius: 100;" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="Roboto Regular" size="16.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="48.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/menu/Cadastrar.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="pesquisarButton" alignment="BOTTOM_LEFT" layoutX="727.0" layoutY="6.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: transparent;" text="Pesquisar" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/menu/pesquisar.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button alignment="BOTTOM_LEFT" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="96.0" style="-fx-background-color: #2d68ff;" text="Menu" textAlignment="CENTER" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/menu/menu.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                     <font>
-                        <Font name="Roboto Regular" size="16.0" />
-                     </font>
                   </Button>
                </children>
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane fx:id="menuSlider" prefHeight="199.0" prefWidth="199.0" style="-fx-background-color: #232323;" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="menuSlider" layoutX="-200.0" prefHeight="199.0" prefWidth="199.0" style="-fx-background-color: #232323;" BorderPane.alignment="CENTER">
                <children>
                   <Accordion layoutX="4.0" layoutY="8.0" prefHeight="656.0" prefWidth="199.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <panes>
-                      <TitledPane animated="false" prefHeight="691.0" prefWidth="199.0" style="-fx-border-color: white;" text="Cadastros">
+                      <TitledPane animated="false" prefHeight="691.0" prefWidth="199.0" style="-fx-border-color: white;" text="Cadastros" textFill="#030303">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="195.0">
                                  <children>
@@ -102,18 +78,18 @@
                                  </children>
                               </AnchorPane>
                         </content>
+                           <font>
+                              <Font name="Open Sans Semibold" size="18.0" />
+                           </font>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/menu/menu.png" />
+                                    <Image url="@../img/menu/Cadastrar.png" />
                                  </image>
                               </ImageView>
                            </graphic>
-                           <font>
-                              <Font name="Roboto Regular" size="18.0" />
-                           </font>
                       </TitledPane>
-                        <TitledPane animated="false" prefHeight="691.0" prefWidth="199.0" style="-fx-border-color: white;" text="Buscas">
+                        <TitledPane animated="false" prefHeight="691.0" prefWidth="199.0" style="-fx-border-color: white;" text="Buscas" textFill="#030303">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -125,16 +101,16 @@
                                  </children>
                               </AnchorPane>
                            </content>
+                           <font>
+                              <Font name="Open Sans Semibold" size="18.0" />
+                           </font>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/menu/menu.png" />
+                                    <Image url="@../img/menu/pesquisar.png" />
                                  </image>
                               </ImageView>
                            </graphic>
-                           <font>
-                              <Font name="Roboto Regular" size="18.0" />
-                           </font>
                         </TitledPane>
                     </panes>
                   </Accordion>
@@ -144,7 +120,7 @@
          <center>
             <AnchorPane fx:id="fatherPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="720.0" fitWidth="1095.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="566.0" fitWidth="882.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/menu/back.png" />
                      </image>
@@ -154,11 +130,6 @@
                         <Font size="33.0" />
                      </font>
                   </Label>
-                  <AnchorPane fx:id="cadastrarSideBar" layoutX="16.0" layoutY="-17.0" prefHeight="609.0" prefWidth="200.0" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="36.19999999999999" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="3.1999999999999886" AnchorPane.topAnchor="-17.0">
-                     <children>
-                        <AnchorPane fx:id="pesquisarSideBar" layoutX="163.0" layoutY="33.0" prefHeight="656.0" prefWidth="203.0" AnchorPane.bottomAnchor="-33.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="-163.0" AnchorPane.topAnchor="33.0" />
-                     </children>
-                  </AnchorPane>
                </children></AnchorPane>
          </center>
       </BorderPane>
