@@ -12,7 +12,7 @@ public class UserDao extends User {
 
   public static void register(String login, String password, String name, String sector, String birth, String CPF){
         String sql = "INSERT INTO USR" +
-                    "VALUES (?,?,?,?,?,?)";
+                    "VALUES (?,?,?,?,?,?);";
 
         try{
             Connection con = ConnectionFactory.getConnection();
@@ -69,20 +69,22 @@ public class UserDao extends User {
 
     public static model.User getUser(String login){
         model.User user = new User();
-        String sql = "SELECT *" +
-                    "FROM USR" +
-                    "WHERE USR_LOGIN = '?'";
+        String sql = "SELECT * FROM USR WHERE USR_LOGIN = 'ADMIN'";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
             
-            smt.setString(1, login.toUpperCase());
+            // smt.setString(1, "'"+login.toUpperCase()+"'");
+            System.out.println(smt.toString());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
-
-                user.setLogin(rs.getString("USR_LOGIN"));
+            System.out.println(rs.toString());
+            rs.next();
+            // System.out.println("teste");
+                 user.setLogin(rs.getString("USR_LOGIN"));   
                 user.setPassword(rs.getString("USR_SENHA"));
+                System.out.println(user.getPassword());
                 user.setName(rs.getString("USR_NOME"));
                 user.setDepartment(rs.getString("USR_STR_COD"));
                 user.setBirthDate(rs.getString("USR_BIRTH"));
@@ -91,6 +93,7 @@ public class UserDao extends User {
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
+
         } catch (SQLException e){
             System.out.println("Error ao Buscar o Usuario!");
             System.out.println(e.getMessage());
@@ -102,7 +105,7 @@ public class UserDao extends User {
     public static boolean loginUser(String login, String password){
         model.User u = getUser(login.toUpperCase());
         
-        if(u.getPassword().toUpperCase() == password.toUpperCase()){
+        if(u.getPassword().toUpperCase().equals(password.toUpperCase())){
             return true;
         }
         return false;

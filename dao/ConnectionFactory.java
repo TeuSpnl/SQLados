@@ -6,6 +6,6 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
     static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=SQLados");
+        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/SQLados", "postgres", "postgres");
     }
 }
