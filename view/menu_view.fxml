@@ -86,20 +86,20 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="pesquisarSideBar" layoutY="58.0" prefHeight="619.0" prefWidth="210.0" AnchorPane.bottomAnchor="-58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
+                  <AnchorPane fx:id="pesquisarSideBar" layoutX="14.0" layoutY="28.0" prefHeight="656.0" prefWidth="203.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="cadastrarUsuarioButton1" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="183.0" style="-fx-background-color: transparent;" text="Buscar por chave primaria" textFill="#030303" wrapText="true">
+                        <Button fx:id="primaryKeyButton" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="183.0" style="-fx-background-color: transparent;" text="Buscar por chave primaria" textFill="#030303" wrapText="true">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
+                        <Label layoutX="27.0" layoutY="14.0" prefHeight="18.0" prefWidth="149.0" text="Buscas" textFill="#0a0a0a">
+                           <font>
+                              <Font name="System Bold Italic" size="26.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
-                  <Label layoutX="27.0" layoutY="14.0" prefHeight="18.0" prefWidth="149.0" text="Buscas" textFill="#0a0a0a">
-                     <font>
-                        <Font name="System Bold Italic" size="26.0" />
-                     </font>
-                  </Label>
                </children>
             </AnchorPane>
          </left>

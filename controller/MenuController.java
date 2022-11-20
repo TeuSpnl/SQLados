@@ -33,6 +33,9 @@ public class MenuController implements Initializable {
   private Button pesquisarButton;
 
   @FXML
+  private AnchorPane fatherPane;
+
+  @FXML
   private AnchorPane menuSlider;
 
   @FXML
@@ -63,7 +66,7 @@ public class MenuController implements Initializable {
   private AnchorPane pesquisarSideBar;
 
   @FXML
-  private AnchorPane fatherPane;
+  private Button primaryKeyButton;
 
 
   private boolean sidebarOpen = false;
@@ -145,6 +148,11 @@ public class MenuController implements Initializable {
     cadastrarConvenio.setOnAction(event -> {
       setCenter("/view/register/insurance_view.fxml");
     });
+
+    primaryKeyButton.setOnAction(event -> {
+      setCenter("/view/search/primaryKey_view.fxml");
+    });
+
 
 
 
