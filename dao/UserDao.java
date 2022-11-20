@@ -93,6 +93,7 @@ public class UserDao extends User {
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
             System.out.println("Error ao Buscar o Usuario!");
+            System.out.println(e.getMessage());
         }
 
         return user;
