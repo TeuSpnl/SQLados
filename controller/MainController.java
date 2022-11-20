@@ -10,14 +10,29 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
 public class MainController implements Initializable {
 
   @FXML
+  private TextField loginField;
+
+  @FXML
   private Button loginButton;
 
+  @FXML
+  private PasswordField passwordField;
+
+  @FXML
+  private ImageView passwordVisible;
+
+  @FXML
+  private ImageView passwordInvisible;
+  
   //These are used for changing the scenes
   private Stage stage;
   private Scene scene;
@@ -47,6 +62,9 @@ public class MainController implements Initializable {
 
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
+        String login = loginField.getText();
+        String password = passwordField.getText();
+
         try {
           switchToMenu(Event);
         } catch (Exception e) {
