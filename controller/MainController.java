@@ -82,15 +82,16 @@ public class MainController implements Initializable {
         passwordVisibleField.setVisible(true);
 
       });
+      
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
         String login = loginField.getText();
         String password = passwordField.getText();
 
         try {
-          if(UserDao.loginUser(login, password) == true){
-            switchToMenu(Event);
-          }
+          // if(UserDao.loginUser(login, password) == true){
+          // }
+          switchToMenu(Event);
         } catch (Exception e) {
           System.out.println("Cant login in, try being a better programmer");
         }

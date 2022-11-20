@@ -24,22 +24,16 @@ public class MenuController implements Initializable {
   private BorderPane borderPane;
 
   @FXML
-  private Button menuButton;
-
-  @FXML
   private Button cadastrarButton;
 
   @FXML
   private Button pesquisarButton;
 
   @FXML
-  private AnchorPane fatherPane;
+  private Button menuButton;
 
   @FXML
   private AnchorPane menuSlider;
-
-  @FXML
-  private AnchorPane cadastrarSideBar;
 
   @FXML
   private Button cadastrarUsuarioButton;
@@ -63,10 +57,16 @@ public class MenuController implements Initializable {
   private Button cadastrarConvenio;
 
   @FXML
-  private AnchorPane pesquisarSideBar;
+  private Button primaryKeyButton;
 
   @FXML
-  private Button primaryKeyButton;
+  private AnchorPane fatherPane;
+
+  @FXML
+  private AnchorPane cadastrarSideBar;
+
+  @FXML
+  private AnchorPane pesquisarSideBar;
 
 
   private boolean sidebarOpen = false;
@@ -81,7 +81,7 @@ public class MenuController implements Initializable {
      * MENU BUTTON METHODS ****************************************************
      */
     // menuSlider.setTranslateX(-220);
-    fatherPane.setTranslateX(-220);
+    //fatherPane.setTranslateX(-220);
 
     menuButton.setOnAction(event -> {
       if (sidebarOpen) {
