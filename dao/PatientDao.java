@@ -6,24 +6,25 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import model.User;
+import model.Patient;
 
-public class UserDao extends User {
+public class PatientDao extends Patient {
 
-  public void register(String login, String password, String name, String sector, String birth, String CPF){
-        String sql = "INSERT INTO USR" +
-                    "VALUES (?,?,?,?,?,?)";
+  public void register(String record , String recordDate, String name, String birthDate, String CPF, String insuranceCode, String phone){
+        String sql = "INSERT INTO PAC" +
+                    "VALUES (?,?,?,?,?,?,?)";
 
         try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, login);
-                smt.setString(2, password);
+                smt.setString(1, record);
+                smt.setString(2, recordDate);
                 smt.setString(3,  name);
-                smt.setString(4, sector);
-                smt.setString(5, birth);
-                smt.setString(6, CPF);
+                smt.setString(4, birthDate);
+                smt.setString(5, CPF);
+                smt.setString(6, insuranceCode);
+                smt.setString(7, phone);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
@@ -32,10 +33,10 @@ public class UserDao extends User {
         }
     }
 
-    public List<model.User> getAll(){
-        List<model.User> users = null;
+    public List<model.Patient> getAll(){
+        List<model.Patient> patients = null;
         String sql = "SELECT *" +
-                    "FROM USR";
+                    "FROM PAC";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
@@ -46,14 +47,15 @@ public class UserDao extends User {
 
             if(rs!=null){
                 while(rs.next()){
-                    model.User u = new User();
-                    u.setLogin(rs.getString("USR_LOGIN"));
-                    u.setPassword(rs.getString("USR_SENHA"));
-                    u.setName(rs.getString("USR_NOME"));
-                    u.setDepartment(rs.getString("USR_STR_COD"));
-                    u.setBirthDate(rs.getString("USR_BIRTH"));
-                    u.setCPF(rs.getString("USR_CPF"));
-                    users.add(u);
+                    model.Patient p = new Patient();
+                    p.setRecord(rs.getString("PAC_REG"));
+                    p.setRecordDate(rs.getString("PAC_DTHR_REG"));
+                    p.setName(rs.getString("PAC_NOME"));
+                    p.setBirthDate(rs.getString("PAC_BIRTH"));
+                    p.setCPF(rs.getString("PAC_CPF"));
+                    p.setInsuranceCode(rs.getString("PAC_CNV_COD"));
+                    p.setPhone(rs.getString("PAC_TEL"));
+                    patients.add(p);
                 }
             }
 
@@ -64,7 +66,7 @@ public class UserDao extends User {
             System.out.println("Error ao Buscar Todos os Usuarios!");
         }
 
-        return users;
+        return patients;
     }
 
 }
