@@ -69,19 +69,17 @@ public class UserDao extends User {
 
     public static model.User getUser(String login){
         model.User user = new User();
-        String sql = "SELECT * FROM USR WHERE USR_LOGIN = 'ADMIN'";
+        String sql = "SELECT * FROM USR WHERE USR_LOGIN = ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
             
-            // smt.setString(1, "'"+login.toUpperCase()+"'");
+            smt.setString(1, "'"+login.toUpperCase()+"'");
             System.out.println(smt.toString());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
-            System.out.println(rs.toString());
             rs.next();
-            // System.out.println("teste");
                  user.setLogin(rs.getString("USR_LOGIN"));   
                 user.setPassword(rs.getString("USR_SENHA"));
                 System.out.println(user.getPassword());
@@ -104,7 +102,6 @@ public class UserDao extends User {
 
     public static boolean loginUser(String login, String password){
         model.User u = getUser(login.toUpperCase());
-        
         if(u.getPassword().toUpperCase().equals(password.toUpperCase())){
             return true;
         }
