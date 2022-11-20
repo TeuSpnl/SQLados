@@ -32,6 +32,9 @@ public class MainController implements Initializable {
 
   @FXML
   private ImageView passwordInvisible;
+
+  @FXML
+  private TextField passwordVisibleField;
   
   //These are used for changing the scenes
   private Stage stage;
@@ -60,6 +63,23 @@ public class MainController implements Initializable {
         loginButton.setStyle("-fx-background-color: #00FF00;-fx-background-radius: 100;");
       });
 
+      passwordVisible.setOnMouseClicked(Event -> {
+        passwordVisible.setVisible(false);
+        passwordInvisible.setVisible(true);
+        passwordField.setText(passwordVisibleField.getText());
+        passwordVisibleField.setVisible(false);
+        passwordField.setVisible(true);
+
+      });
+
+      passwordInvisible.setOnMouseClicked(Event -> {
+        passwordInvisible.setVisible(false);
+        passwordVisible.setVisible(true);
+        passwordVisibleField.setText(passwordField.getText());
+        passwordField.setVisible(false);
+        passwordVisibleField.setVisible(true);
+
+      });
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
         String login = loginField.getText();
