@@ -69,15 +69,16 @@ public class UserDao extends User {
 
     public static model.User getUser(String login){
         model.User user = new User();
-        String sql = "SELECT * FROM USR WHERE USR_LOGIN = ?";
+        String sql = "SELECT * " +
+                    " FROM USR " +
+                    "WHERE USR_LOGIN = ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
             
-            smt.setString(1, "'"+login.toUpperCase()+"'");
-            System.out.println(smt.toString());
+            smt.setString(1, login.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
             rs.next();
                  user.setLogin(rs.getString("USR_LOGIN"));   

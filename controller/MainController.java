@@ -89,7 +89,7 @@ public class MainController implements Initializable {
         String password = passwordField.getText();
 
         try {
-          if(UserDao.loginUser(login, password) == true && password != ""){
+          if(password.length() > 0 && UserDao.loginUser(login, password)){
             switchToMenu(Event);
           }
         } catch (Exception e) {
