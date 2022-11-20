@@ -63,10 +63,9 @@ public class PatientDao extends Patient {
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
-            System.out.println("Error ao Buscar Todos os Usuarios!");
+            System.out.println("Error ao Buscar Todos os Pacientes!");
         }
 
         return patients;
     }
-
 }
