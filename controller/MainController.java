@@ -88,9 +88,9 @@ public class MainController implements Initializable {
         String password = passwordField.getText();
 
         try {
-          if(UserDao.loginUser(login, password) == true){
+          //if(UserDao.loginUser(login, password) == true){ TODO: Verifica se login e senha Bate
             switchToMenu(Event);
-          }
+          //}
         } catch (Exception e) {
           System.out.println("Cant login in, try being a better programmer");
         }

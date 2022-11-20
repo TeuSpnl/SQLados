@@ -1,6 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Program Files\\Java\\JDBC SQL SERVER\\sqljdbc_11.2\\ptb\\mssql-jdbc-11.2.0.jre8.jar"
-    ]
-}
