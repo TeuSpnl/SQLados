@@ -127,11 +127,11 @@ public class MenuController implements Initializable {
     });
 
     cadastrarSetor.setOnAction(event -> {
-      setCenter("/view/register/sector_view.fxml");
+      setCenter("/view/register/department_view.fxml");
     });
 
     cadastrarOrdem.setOnAction(event -> {
-      setCenter("/view/register/order_view.fxml");
+      setCenter("/view/register/serviceOrder_view.fxml");
     });
 
     cadastrarPaciente.setOnAction(event -> {
@@ -139,14 +139,16 @@ public class MenuController implements Initializable {
     });
 
     cadastrarPrestador.setOnAction(event -> {
-      setCenter("/view/register/provider_view.fxml");
+      setCenter("/view/register/serviceProvider_view.fxml");
     });
 
     cadastrarConvenio.setOnAction(event -> {
-      setCenter("/view/register/contract_view.fxml");
+      setCenter("/view/register/insurance_view.fxml");
     });
 
-    
+
+
+
 
   }
 
