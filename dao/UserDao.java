@@ -71,7 +71,7 @@ public class UserDao extends User {
         model.User user = new User();
         String sql = "SELECT *" +
                     "FROM USR" +
-                    "WHERE USER_LOGIN = '?'";
+                    "WHERE USR_LOGIN = '?'";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
