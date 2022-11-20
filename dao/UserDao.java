@@ -10,7 +10,7 @@ import model.User;
 
 public class UserDao extends User {
 
-  public void register(String login, String password, String name, String sector, String birth, String CPF){
+  public static void register(String login, String password, String name, String sector, String birth, String CPF){
         String sql = "INSERT INTO USR" +
                     "VALUES (?,?,?,?,?,?)";
 
@@ -32,7 +32,7 @@ public class UserDao extends User {
         }
     }
 
-    public List<model.User> getAll(){
+    public static List<model.User> getAll(){
         List<model.User> users = null;
         String sql = "SELECT *" +
                     "FROM USR";
@@ -67,7 +67,7 @@ public class UserDao extends User {
         return users;
     }
 
-    public model.User getUser(String login){
+    public static model.User getUser(String login){
         model.User user = new User();
         String sql = "SELECT *" +
                     "FROM USR" +
@@ -98,7 +98,7 @@ public class UserDao extends User {
         return user;
     }
 
-    public boolean loginUser(String login, String password){
+    public static boolean loginUser(String login, String password){
         model.User u = getUser(login.toUpperCase());
         
         if(u.getPassword().toUpperCase() == password.toUpperCase()){

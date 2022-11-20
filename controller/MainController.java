@@ -1,5 +1,7 @@
 package controller;
 
+import dao.*;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -86,7 +88,9 @@ public class MainController implements Initializable {
         String password = passwordField.getText();
 
         try {
-          switchToMenu(Event);
+          if(UserDao.loginUser(login, password) == true){
+            switchToMenu(Event);
+          }
         } catch (Exception e) {
           System.out.println("Cant login in, try being a better programmer");
         }
