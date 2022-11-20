@@ -23,8 +23,6 @@ public class MainController implements Initializable {
   private Scene scene;
   private Parent root;
 
-  
-
 
   /* (non-Javadoc)
    * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
