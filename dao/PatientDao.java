@@ -34,7 +34,7 @@ public class PatientDao extends Patient {
 
     public List<model.Patient> getAll(){
         List<model.Patient> patients = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM PAC";
 
         try{
@@ -70,9 +70,9 @@ public class PatientDao extends Patient {
 
     public model.Patient getPatient(String record){
         model.Patient pac = new Patient();
-        String sql = "SELECT *" +
-                    "FROM PAC" +
-                    "WHERE PAC_REG= '?'";
+        String sql = "SELECT * " +
+                    "FROM PAC " +
+                    "WHERE PAC_REG= ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();

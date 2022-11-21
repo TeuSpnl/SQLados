@@ -10,7 +10,7 @@ import model.Equipment;
 
 public class EquipmentDao extends Equipment {
 
-  public void register(String name, int departmentCode){
+  public static void register(String name, int departmentCode){
         String sql = "INSERT INTO EQP (EQP_DTHR_REGISTRO,EQP_NOME,EQP_STR_COD) " +
                     "VALUES (current_timestamp,?,?)";
 
@@ -30,7 +30,7 @@ public class EquipmentDao extends Equipment {
 
     public List<model.Equipment> getAll(){
         List<model.Equipment> equipments = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM EQP";
 
         try{
@@ -63,9 +63,9 @@ public class EquipmentDao extends Equipment {
 
     public model.Equipment getEquipment(String code){
         model.Equipment eqp = new Equipment();
-        String sql = "SELECT *" +
-                    "FROM EQP" +
-                    "WHERE EQP_NUMERO = '?'";
+        String sql = "SELECT * " +
+                    "FROM EQP " +
+                    "WHERE EQP_NUMERO = ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();

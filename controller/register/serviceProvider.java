@@ -33,7 +33,7 @@ public class serviceProvider implements Initializable{
 
     public void initialize(URL location, ResourceBundle resources) {
 
-        //register the user
+        //register the service provider
         registerButton.setOnAction(Event -> {
             String name = nameField.getText();
             int code = Integer.parseInt(codeField.getText());

@@ -34,7 +34,7 @@ public class OrderOfServiceDao extends OrderOfService {
 
     public List<model.OrderOfService> getAll(){
         List<model.OrderOfService> orders = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM OS";
 
         try{
@@ -71,9 +71,9 @@ public class OrderOfServiceDao extends OrderOfService {
 
     public model.OrderOfService getOS(String number){
         model.OrderOfService os = new OrderOfService();
-        String sql = "SELECT *" +
-                    "FROM OS" +
-                    "WHERE OS_NUMERO = '?'";
+        String sql = "SELECT * " +
+                    "FROM OS " +
+                    "WHERE OS_NUMERO = ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();
