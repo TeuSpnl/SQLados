@@ -14,9 +14,6 @@ public class Department implements Initializable{
     private TextField nameField;
 
     @FXML
-    private TextField codeField;
-
-    @FXML
     private Button registerButton;
 
     @FXML

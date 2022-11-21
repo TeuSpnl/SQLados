@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -37,11 +38,15 @@ public class MainController implements Initializable {
 
   @FXML
   private TextField passwordVisibleField;
+
+  @FXML
+  private Label errorLabel;
   
   //These are used for changing the scenes
   private Stage stage;
   private Scene scene;
   private Parent root;
+  private boolean usingPasswordVisible = false;
 
 
   /* (non-Javadoc)
@@ -68,6 +73,8 @@ public class MainController implements Initializable {
       passwordVisible.setOnMouseClicked(Event -> {
         passwordVisible.setVisible(false);
         passwordInvisible.setVisible(true);
+        
+        usingPasswordVisible = false;
         passwordField.setText(passwordVisibleField.getText());
         passwordVisibleField.setVisible(false);
         passwordField.setVisible(true);
@@ -77,7 +84,10 @@ public class MainController implements Initializable {
       passwordInvisible.setOnMouseClicked(Event -> {
         passwordInvisible.setVisible(false);
         passwordVisible.setVisible(true);
+
+        usingPasswordVisible = true;
         passwordVisibleField.setText(passwordField.getText());
+
         passwordField.setVisible(false);
         passwordVisibleField.setVisible(true);
 
@@ -85,20 +95,27 @@ public class MainController implements Initializable {
       
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
-        String login = loginField.getText();
-        String password = passwordField.getText();
-
+        String login =  loginField.getText();
+        String password = usingPasswordVisible ? passwordVisibleField.getText() : passwordField.getText();
+        
         try {
           if(password.length() > 0 && UserDao.loginUser(login, password)){
             switchToMenu(Event);
+          }else{
+            passwordField.setText("");
+            passwordVisibleField.setText("");
+            passwordField.setStyle("-fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: red; -fx-border-width: 1;");
+            passwordVisibleField.setStyle(passwordField.getStyle());
+            loginField.setStyle(passwordField.getStyle());
+            errorLabel.setVisible(true);
           }
+
         } catch (Exception e) {
           System.out.println("Cant login in, try being a better programmer");
         }
       });
 
     }
-
 
     public void switchToMenu(ActionEvent event) {
       try {
@@ -111,6 +128,11 @@ public class MainController implements Initializable {
       } catch (Exception e) {
         // TODO: handle exception
       }
+    }
+
+
+    public void fazerNada(){
+      System.out.println("Fazendo nada");
     }
 
 }

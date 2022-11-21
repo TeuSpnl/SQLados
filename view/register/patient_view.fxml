@@ -14,10 +14,11 @@
             <Font name="System Bold" size="43.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="366.0" layoutY="227.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <TextField fx:id="registerField" layoutX="366.0" layoutY="188.0" prefHeight="28.0" prefWidth="270.0" promptText="Registro" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <TextField fx:id="CPFfield" layoutX="366.0" layoutY="270.0" prefHeight="28.0" prefWidth="270.0" promptText="CPF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="451.0" layoutY="377.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
-      <DatePicker fx:id="dateField" layoutX="365.0" layoutY="316.0" prefHeight="28.0" prefWidth="270.0" promptText="data do registro" />
+      <TextField fx:id="nameField" layoutX="365.0" layoutY="185.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <TextField fx:id="CPFfield" layoutX="365.0" layoutY="226.0" prefHeight="28.0" prefWidth="270.0" promptText="CPF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <Button fx:id="registerButton" layoutX="452.0" layoutY="416.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
+      <DatePicker fx:id="birthField" layoutX="366.0" layoutY="348.0" prefHeight="28.0" prefWidth="270.0" promptText="Data de nascimento" />
+      <TextField fx:id="telefoneField" layoutX="365.0" layoutY="268.0" prefHeight="28.0" prefWidth="270.0" promptText="Telefone" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <TextField fx:id="codigoConvenioField" layoutX="366.0" layoutY="305.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo do convenio" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
    </children>
 </AnchorPane>

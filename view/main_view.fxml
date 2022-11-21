@@ -34,7 +34,7 @@
                   <Image url="@../img/Login/icons8-usuário-homem-com-círculo-30.png" />
                </image>
             </ImageView>
-            <Button fx:id="loginButton" layoutX="225.0" layoutY="536.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="139.0" style="-fx-background-radius: 100; -fx-background-color: #00FF00;" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="225.0" layoutY="536.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #00FF00;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Roboto Regular" size="20.0" />
                </font>
@@ -51,6 +51,11 @@
                </image>
             </ImageView>
             <TextField fx:id="passwordVisibleField" layoutX="167.0" layoutY="456.0" prefHeight="33.0" prefWidth="255.0" style="-fx-background-radius: 100;" visible="false" />
+            <Label fx:id="errorLabel" layoutX="140.0" layoutY="497.0" prefHeight="33.0" prefWidth="291.0" text="Um usuario com esta senha nao foi encontrado" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

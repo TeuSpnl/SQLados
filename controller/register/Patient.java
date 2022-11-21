@@ -14,16 +14,18 @@ public class Patient {
     private TextField nameField;
 
     @FXML
-    private TextField registerField;
-
-    @FXML
     private TextField CPFfield;
 
     @FXML
     private Button registerButton;
 
     @FXML
-    private DatePicker dateField;
+    private DatePicker birthField;
 
-    
+    @FXML
+    private TextField telefoneField;
+
+    @FXML
+    private TextField codigoConvenioField;
+
 }

@@ -14,11 +14,8 @@ public class Insurance implements Initializable{
     private TextField nameField;
 
     @FXML
-    private TextField codeField;
-
-    @FXML
     private Button registerButton;
-
+    //qualquer coisa
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

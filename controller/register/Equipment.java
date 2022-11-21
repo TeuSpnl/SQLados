@@ -12,9 +12,6 @@ import javafx.scene.control.TextField;
 public class Equipment implements Initializable{
 
     @FXML
-    private TextField numberField;
-
-    @FXML
     private TextField nameField;
 
     @FXML

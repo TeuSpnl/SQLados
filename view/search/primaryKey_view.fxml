@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" style="-fx-background-color: #00b2e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.Insurance">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" style="-fx-background-color: #00b2e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.search.PrimaryKey">
    <children>
-      <Label layoutX="273.0" layoutY="32.0" prefHeight="71.0" prefWidth="553.0" text="Insira uma chave primaria" textFill="WHITE">
+      <Label layoutX="211.0" layoutY="81.0" prefHeight="71.0" prefWidth="553.0" text="Insira uma chave primaria" textFill="WHITE">
          <font>
             <Font name="System Bold" size="43.0" />
          </font>
       </Label>
-      <TextField fx:id="codeField" layoutX="365.0" layoutY="126.0" prefHeight="28.0" prefWidth="270.0" promptText="Chave primaria" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="451.0" layoutY="161.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Buscar" textFill="#050505" />
-      <ListView editable="true" fixedCellSize="20.0" layoutX="88.0" layoutY="230.0" prefHeight="341.0" prefWidth="824.0" />
+      <TextField fx:id="codeField" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="577.0" promptText="Chave primaria" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <Button fx:id="registerButton" layoutX="452.0" layoutY="190.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Buscar" textFill="#050505" />
+      <ListView fx:id="listView" editable="true" fixedCellSize="20.0" layoutX="40.0" layoutY="228.0" prefHeight="351.0" prefWidth="921.0" />
+      <ChoiceBox layoutX="598.0" layoutY="14.0" prefHeight="28.0" prefWidth="397.0" />
    </children>
 </AnchorPane>

@@ -13,8 +13,7 @@
             <Font name="System Bold" size="43.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="367.0" layoutY="259.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <TextField fx:id="codeField" layoutX="367.0" layoutY="214.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="453.0" layoutY="343.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
+      <TextField fx:id="nameField" layoutX="365.0" layoutY="204.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <Button fx:id="registerButton" layoutX="454.0" layoutY="291.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
    </children>
 </AnchorPane>

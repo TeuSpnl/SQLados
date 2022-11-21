@@ -8,7 +8,7 @@ import java.util.List;
 
 import model.ServiceProvider;
 
-public class ServiceProviderDao extends ServiceProvider {
+public class serviceProviderDao extends ServiceProvider {
 
   public static void register(int code, String name, Long CPF, String council, String type, String UF){
         String sql = "INSERT INTO PSV " +
