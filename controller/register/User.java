@@ -46,6 +46,7 @@ public class User implements Initializable{
             Date birth = Date.valueOf(datePanel.getValue().toString());
             System.out.println(birth);
             Long cpf = Long.parseLong(CPFfield.getText());
+            
     
             try {
                 dao.UserDao.register(login, password, name, department, birth, cpf);

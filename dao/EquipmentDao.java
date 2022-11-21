@@ -10,18 +10,16 @@ import model.Equipment;
 
 public class EquipmentDao extends Equipment {
 
-  public void register(String number, String registerDate, String name, String departmentCode){
-        String sql = "INSERT INTO EQP" +
-                    "VALUES (?,?,?,?)";
+  public void register(String name, int departmentCode){
+        String sql = "INSERT INTO EQP (EQP_DTHR_REGISTRO,EQP_NOME,EQP_STR_COD) " +
+                    "VALUES (current_timestamp,?,?)";
 
         try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, number);
-                smt.setString(2, registerDate);
-                smt.setString(3,  name);
-                smt.setString(4, departmentCode);
+                smt.setString(1,  name);
+                smt.setInt(2, departmentCode);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD

@@ -1,4 +1,8 @@
 package controller.register;
+import dao.PatientDao;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,4 +26,5 @@ public class Patient {
     @FXML
     private DatePicker dateField;
 
+    
 }

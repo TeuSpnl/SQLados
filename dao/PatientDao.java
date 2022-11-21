@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,21 +11,19 @@ import model.Patient;
 
 public class PatientDao extends Patient {
 
-  public void register(String record , String recordDate, String name, String birthDate, String CPF, String insuranceCode, String phone){
-        String sql = "INSERT INTO PAC" +
-                    "VALUES (?,?,?,?,?,?,?)";
+  public void register(String name, Date birthDate, long CPF, String insuranceCode, long phone){
+        String sql = "INSERT INTO PAC (PAC_DTHR_REG,PAC_NOME,PAC_BIRTH,PAC_CPF,PAC_CNV_COD,PAC_TEL)" +
+                    "VALUES (current_timestamp,?,?,?,?,?)";
 
         try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, record);
-                smt.setString(2, recordDate);
-                smt.setString(3,  name);
-                smt.setString(4, birthDate);
-                smt.setString(5, CPF);
-                smt.setString(6, insuranceCode);
-                smt.setString(7, phone);
+                smt.setString(1,  name);
+                smt.setDate(2, birthDate);
+                smt.setLong(3, CPF);
+                smt.setString(4, insuranceCode);
+                smt.setLong(5, phone);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD

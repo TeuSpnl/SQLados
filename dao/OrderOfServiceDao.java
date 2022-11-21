@@ -10,22 +10,20 @@ import model.OrderOfService;
 
 public class OrderOfServiceDao extends OrderOfService {
 
-  public void register(String Number, String patientRecord, String dateAndHour, String referringDoctor, String department, String typeOfservice, String responsibleUser, String insurance){
-        String sql = "INSERT INTO OS" +
-                    "VALUES (?,?,?,?,?,?,?,?)";
+  public void register(int patientRecord, int referringDoctor, int department, String typeOfservice, String responsibleUser, int insurance){
+        String sql = "INSERT INTO OS (OS_PAC_REG,OS_DTHR,OS_REQUISITANTE,OS_STR_COD,OS_TIPO_ATEND,OS_USR_RESP,OS_CNV_COD)" +
+                    "VALUES (?,current_timestamp,?,?,?,?,?)";
 
         try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, Number);
-                smt.setString(2, patientRecord);
-                smt.setString(3,  dateAndHour);
-                smt.setString(4, referringDoctor);
-                smt.setString(5, department);
-                smt.setString(6, typeOfservice);
-                smt.setString(7, responsibleUser);
-                smt.setString(8, insurance);
+                smt.setInt(1, patientRecord);
+                smt.setInt(2, referringDoctor);
+                smt.setInt(3, department);
+                smt.setString(4, typeOfservice);
+                smt.setString(5, responsibleUser);
+                smt.setInt(6, insurance);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD

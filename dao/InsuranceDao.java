@@ -10,16 +10,15 @@ import model.Insurance;
 
 public class InsuranceDao extends Insurance {
 
-  public void register(String code, String name){
-        String sql = "INSERT INTO CNV" +
-                    "VALUES (?,?)";
+  public void register(String name){
+        String sql = "INSERT INTO CNV (CNV_NOME) " +
+                    "VALUES (?)";
 
         try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
-                smt.setString(1, code);
-                smt.setString(2, name);
+            smt.setString(1, name);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
@@ -30,7 +29,7 @@ public class InsuranceDao extends Insurance {
 
     public List<model.Insurance> getAll(){
         List<model.Insurance> insurances = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM CNV";
 
         try{
@@ -62,7 +61,7 @@ public class InsuranceDao extends Insurance {
     public model.Insurance getInsurance(String code){
         model.Insurance cnv = new Insurance();
         String sql = "SELECT *" +
-                    "FROM CNV" +
+                    "FROM CNV " +
                     "WHERE CNV_COD = '?'";
 
         try{
