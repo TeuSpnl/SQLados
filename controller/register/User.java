@@ -1,5 +1,4 @@
 package controller.register;
-import dao.UserDao;
 
 import java.net.URL;
 import java.sql.Date;

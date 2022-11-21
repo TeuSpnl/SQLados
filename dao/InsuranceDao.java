@@ -10,7 +10,7 @@ import model.Insurance;
 
 public class InsuranceDao extends Insurance {
 
-  public void register(String name){
+  public static void register(String name){
         String sql = "INSERT INTO CNV (CNV_NOME) " +
                     "VALUES (?)";
 
@@ -60,9 +60,9 @@ public class InsuranceDao extends Insurance {
 
     public model.Insurance getInsurance(String code){
         model.Insurance cnv = new Insurance();
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM CNV " +
-                    "WHERE CNV_COD = '?'";
+                    "WHERE CNV_COD = ?";
 
         try{
             Connection con = new ConnectionFactory().getConnection();

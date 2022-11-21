@@ -35,7 +35,7 @@ public class ServiceProviderDao extends ServiceProvider {
 
     public List<model.ServiceProvider> getAll(){
         List<model.ServiceProvider> services = null;
-        String sql = "SELECT *" +
+        String sql = "SELECT * " +
                     "FROM PSV";
 
         try{

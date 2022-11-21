@@ -1,5 +1,4 @@
 package controller.register;
-import dao.PatientDao;
 
 import java.net.URL;
 import java.util.ResourceBundle;
