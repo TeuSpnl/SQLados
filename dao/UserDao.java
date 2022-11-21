@@ -53,9 +53,9 @@ public class UserDao extends User {
                     u.setLogin(rs.getString("USR_LOGIN"));
                     u.setPassword(rs.getString("USR_SENHA"));
                     u.setName(rs.getString("USR_NOME"));
-                    u.setDepartment(rs.getString("USR_STR_COD"));
-                    u.setBirthDate(rs.getString("USR_BIRTH"));
-                    u.setCPF(rs.getString("USR_CPF"));
+                    u.setDepartment(rs.getInt("USR_STR_COD"));
+                    u.setBirthDate(rs.getDate("USR_BIRTH"));
+                    u.setCPF(rs.getLong("USR_CPF"));
                     users.add(u);
                 }
             }
@@ -87,9 +87,9 @@ public class UserDao extends User {
                 user.setLogin(rs.getString("USR_LOGIN"));   
                 user.setPassword(rs.getString("USR_SENHA"));
                 user.setName(rs.getString("USR_NOME"));
-                user.setDepartment(rs.getString("USR_STR_COD"));
-                user.setBirthDate(rs.getString("USR_BIRTH"));
-                user.setCPF(rs.getString("USR_CPF"));
+                user.setDepartment(rs.getInt("USR_STR_COD"));
+                user.setBirthDate(rs.getDate("USR_BIRTH"));
+                user.setCPF(rs.getLong("USR_CPF"));
 
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement

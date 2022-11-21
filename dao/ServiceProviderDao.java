@@ -48,9 +48,9 @@ public class ServiceProviderDao extends ServiceProvider {
             if(rs!=null){
                 while(rs.next()){
                     model.ServiceProvider s = new ServiceProvider();
-                    s.setCode(rs.getString("PSV_COD"));
+                    s.setCode(rs.getInt("PSV_COD"));
                     s.setName(rs.getString("PSV_NOME"));
-                    s.setCPF(rs.getString("PSV_CPF"));
+                    s.setCPF(rs.getLong("PSV_CPF"));
                     s.setCouncil(rs.getString("PSV_CONSELHO"));
                     s.setType(rs.getString("PSV_TIPO"));
                     s.setUF(rs.getString("PSV_UF"));
@@ -82,9 +82,9 @@ public class ServiceProviderDao extends ServiceProvider {
             smt.setString(1, code.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                psv.setCode(rs.getString("PSV_COD"));
+                psv.setCode(rs.getInt("PSV_COD"));
                 psv.setName(rs.getString("PSV_NOME"));
-                psv.setCPF(rs.getString("PSV_CPF"));
+                psv.setCPF(rs.getLong("PSV_CPF"));
                 psv.setCouncil(rs.getString("PSV_CONSELHO"));
                 psv.setType(rs.getString("PSV_TIPO"));
                 psv.setUF(rs.getString("PSV_UF"));

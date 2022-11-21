@@ -42,7 +42,7 @@ public class InsuranceDao extends Insurance {
             if(rs!=null){
                 while(rs.next()){
                     model.Insurance i = new Insurance();
-                    i.setCode(rs.getString("CNV_COD"));
+                    i.setCode(rs.getInt("CNV_COD"));
                     i.setName(rs.getString("CNV_NOME"));
                     insurances.add(i);
                 }
@@ -72,7 +72,7 @@ public class InsuranceDao extends Insurance {
             smt.setString(1, code.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                cnv.setCode(rs.getString("CNV_COD"));
+                cnv.setCode(rs.getInt("CNV_COD"));
                 cnv.setName(rs.getString("CNV_NOME"));
 
             rs.close(); // Finaliza os dados da Query

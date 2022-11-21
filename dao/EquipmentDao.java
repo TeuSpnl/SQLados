@@ -43,10 +43,10 @@ public class EquipmentDao extends Equipment {
             if(rs!=null){
                 while(rs.next()){
                     model.Equipment e = new Equipment();
-                    e.setNumber(rs.getString("EQP_NUMERO"));
-                    e.setRegisterDate(rs.getString("EQP_DTHR_REGISTRO"));
+                    e.setNumber(rs.getInt("EQP_NUMERO"));
+                    e.setRegisterDate(rs.getDate("EQP_DTHR_REGISTRO"));
                     e.setName(rs.getString("EQP_NOME"));
-                    e.setDepartmentCode(rs.getString("EQP_STR_COD"));
+                    e.setDepartmentCode(rs.getInt("EQP_STR_COD"));
                     equipments.add(e);
                 }
             }
@@ -75,10 +75,10 @@ public class EquipmentDao extends Equipment {
             smt.setString(1, code.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                eqp.setNumber(rs.getString("EQP_NUMERO"));
-                eqp.setRegisterDate(rs.getString("EQP_DTHR_REGISTRO"));
+                eqp.setNumber(rs.getInt("EQP_NUMERO"));
+                eqp.setRegisterDate(rs.getDate("EQP_DTHR_REGISTRO"));
                 eqp.setName(rs.getString("EQP_NOME"));
-                eqp.setDepartmentCode(rs.getString("EQP_STR_COD"));
+                eqp.setDepartmentCode(rs.getInt("EQP_STR_COD"));
 
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement

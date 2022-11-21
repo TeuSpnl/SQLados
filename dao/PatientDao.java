@@ -47,13 +47,13 @@ public class PatientDao extends Patient {
             if(rs!=null){
                 while(rs.next()){
                     model.Patient p = new Patient();
-                    p.setRecord(rs.getString("PAC_REG"));
-                    p.setRecordDate(rs.getString("PAC_DTHR_REG"));
+                    p.setRecord(rs.getInt("PAC_REG"));
+                    p.setRecordDate(rs.getDate("PAC_DTHR_REG"));
                     p.setName(rs.getString("PAC_NOME"));
-                    p.setBirthDate(rs.getString("PAC_BIRTH"));
-                    p.setCPF(rs.getString("PAC_CPF"));
-                    p.setInsuranceCode(rs.getString("PAC_CNV_COD"));
-                    p.setPhone(rs.getString("PAC_TEL"));
+                    p.setBirthDate(rs.getDate("PAC_BIRTH"));
+                    p.setCPF(rs.getLong("PAC_CPF"));
+                    p.setInsuranceCode(rs.getInt("PAC_CNV_COD"));
+                    p.setPhone(rs.getLong("PAC_TEL"));
                     patients.add(p);
                 }
             }
@@ -82,13 +82,13 @@ public class PatientDao extends Patient {
             smt.setString(1, record.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                pac.setRecord(rs.getString("PAC_REG"));
-                pac.setRecordDate(rs.getString("PAC_DTHR_REG"));
+                pac.setRecord(rs.getInt("PAC_REG"));
+                pac.setRecordDate(rs.getDate("PAC_DTHR_REG"));
                 pac.setName(rs.getString("PAC_NOME"));
-                pac.setBirthDate(rs.getString("PAC_BIRTH"));
-                pac.setCPF(rs.getString("PAC_CPF"));
-                pac.setInsuranceCode(rs.getString("PAC_CNV_COD"));
-                pac.setPhone(rs.getString("PAC_TEL"));
+                pac.setBirthDate(rs.getDate("PAC_BIRTH"));
+                pac.setCPF(rs.getLong("PAC_CPF"));
+                pac.setInsuranceCode(rs.getInt("PAC_CNV_COD"));
+                pac.setPhone(rs.getLong("PAC_TEL"));
 
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement

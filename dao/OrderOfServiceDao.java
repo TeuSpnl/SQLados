@@ -47,14 +47,14 @@ public class OrderOfServiceDao extends OrderOfService {
             if(rs!=null){
                 while(rs.next()){
                     model.OrderOfService o = new OrderOfService();
-                    o.setNumber(rs.getString("OS_NUMERO"));
-                    o.setPatientRecord(rs.getString("OS_PAC_REG"));
-                    o.setDateAndHour(rs.getString("OS_DTHR"));
-                    o.setReferringDoctor(rs.getString("OS_REQUISITANTE"));
-                    o.setDepartment(rs.getString("OS_STR_COD"));
+                    o.setNumber(rs.getInt("OS_NUMERO"));
+                    o.setPatientRecord(rs.getInt("OS_PAC_REG"));
+                    o.setDateAndHour(rs.getDate("OS_DTHR"));
+                    o.setReferringDoctor(rs.getInt("OS_REQUISITANTE"));
+                    o.setDepartment(rs.getInt("OS_STR_COD"));
                     o.setTypeOfservice(rs.getString("OS_TIPO_ATEND"));
                     o.setResponsibleUser(rs.getString("OS_USR_RESP"));
-                    o.setInsurance(rs.getString("OS_CNV_COD"));
+                    o.setInsurance(rs.getInt("OS_CNV_COD"));
                     orders.add(o);
                 }
             }
@@ -83,14 +83,14 @@ public class OrderOfServiceDao extends OrderOfService {
             smt.setString(1, number.toUpperCase());
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                os.setNumber(rs.getString("OS_NUMERO"));
-                os.setPatientRecord(rs.getString("OS_PAC_REG"));
-                os.setDateAndHour(rs.getString("OS_DTHR"));
-                os.setReferringDoctor(rs.getString("OS_REQUISITANTE"));
-                os.setDepartment(rs.getString("OS_STR_COD"));
+                os.setNumber(rs.getInt("OS_NUMERO"));
+                os.setPatientRecord(rs.getInt("OS_PAC_REG"));
+                os.setDateAndHour(rs.getDate("OS_DTHR"));
+                os.setReferringDoctor(rs.getInt("OS_REQUISITANTE"));
+                os.setDepartment(rs.getInt("OS_STR_COD"));
                 os.setTypeOfservice(rs.getString("OS_TIPO_ATEND"));
                 os.setResponsibleUser(rs.getString("OS_USR_RESP"));
-                os.setInsurance(rs.getString("OS_CNV_COD"));
+                os.setInsurance(rs.getInt("OS_CNV_COD"));
 
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement
