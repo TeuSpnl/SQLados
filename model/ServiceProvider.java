@@ -1,14 +1,14 @@
 package model;
 
 public class ServiceProvider {
-  private String code;
+  private int code;
   private String name;
-  private String CPF;
+  private long CPF;
   private String council;
   private String type;
   private String UF;
 
-  public ServiceProvider(String code, String name, String CPF, String council, String type, String UF){
+  public ServiceProvider(int code, String name, long CPF, String council, String type, String UF){
     this.code = code;
     this.name = name;
     this.CPF = CPF;
@@ -18,19 +18,19 @@ public class ServiceProvider {
   }
 
   public ServiceProvider(){
-    this.code = "";
+    this.code = 0;
     this.name = "";
-    this.CPF = "";
+    this.CPF = 0;
     this.council = "";
     this.type = "";
     this.UF = "";
   }
 
-  public String getCode() {
+  public int getCode() {
     return code;
   }
 
-  public void setCode(String code) {
+  public void setCode(int code) {
     this.code = code;
   }
 
@@ -42,11 +42,11 @@ public class ServiceProvider {
     this.name = name;
   }
 
-  public String getCPF() {
+  public long getCPF() {
     return CPF;
   }
 
-  public void setCPF(String cPF) {
+  public void setCPF(long cPF) {
     CPF = cPF;
   }
 

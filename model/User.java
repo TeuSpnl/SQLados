@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Date;
 
 /*
  * This class is used to create a user object
@@ -17,20 +18,20 @@ public class User{
   private String login;
   private String password;
   private String name;
-  private String department;
-  private String birthDate;
-  private String CPF;
+  private int department;
+  private Date birthDate;
+  private long CPF;
 
   public User(){
     this.login = "";
     this.password = "";
     this.name = "";
-    this.department = "";
-    this.birthDate = "";
-    this.CPF = "";
+    this.department = 0;
+    this.birthDate = null;
+    this.CPF = 0;
   }
 
-  public User(String login, String password, String name, String department, String birthDate, String CPF){
+  public User(String login, String password, String name, int department, Date birthDate, long CPF){
     this.login = login;
     this.password = password;
     this.name = name;
@@ -63,27 +64,27 @@ public class User{
     this.name = name;
   }
 
-  public String getDepartment() {
+  public int getDepartment() {
     return department;
   }
 
-  public void setDepartment(String department) {
+  public void setDepartment(int department) {
     this.department = department;
   }
 
-  public String getBirthDate() {
+  public Date getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(String birthDate) {
+  public void setBirthDate(Date birthDate) {
     this.birthDate = birthDate;
   }
 
-  public String getCPF() {
+  public long getCPF() {
     return CPF;
   }
 
-  public void setCPF(String cPF) {
+  public void setCPF(long cPF) {
     CPF = cPF;
   }
   

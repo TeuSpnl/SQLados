@@ -1,17 +1,19 @@
 package model;
 
+import java.sql.Date;
+
 public class OrderOfService {
 
-  private String Number;
-  private String patientRecord;
-  private String dateAndHour;
-  private String referringDoctor;
-  private String department;
+  private int Number;
+  private int patientRecord;
+  private Date dateAndHour;
+  private int referringDoctor;
+  private int department;
   private String typeOfservice;
   private String responsibleUser;
-  private String insurance;
+  private int insurance;
 
-  public OrderOfService(String Number, String patientRecord, String dateAndHour, String referringDoctor, String department, String typeOfservice, String responsibleUser, String insurance){
+  public OrderOfService(int Number, int patientRecord, Date dateAndHour, int referringDoctor, int department, String typeOfservice, String responsibleUser, int insurance){
     this.Number = Number;
     this.patientRecord = patientRecord;
     this.dateAndHour = dateAndHour;
@@ -23,53 +25,53 @@ public class OrderOfService {
   }
 
   public OrderOfService(){
-    this.Number = "";
-    this.patientRecord = "";
-    this.dateAndHour = "";
-    this.referringDoctor = "";
-    this.department = "";
+    this.Number = 0;
+    this.patientRecord = 0;
+    this.dateAndHour = null;
+    this.referringDoctor = 0;
+    this.department = 0;
     this.typeOfservice = "";
     this.responsibleUser = "";
-    this.insurance = "";
+    this.insurance = 0;
   }
 
-  public String getNumber() {
+  public int getNumber() {
     return Number;
   }
 
-  public void setNumber(String number) {
+  public void setNumber(int number) {
     Number = number;
   }
 
-  public String getPatientRecord() {
+  public int getPatientRecord() {
     return patientRecord;
   }
 
-  public void setPatientRecord(String patientRecord) {
+  public void setPatientRecord(int patientRecord) {
     this.patientRecord = patientRecord;
   }
 
-  public String getDateAndHour() {
+  public Date getDateAndHour() {
     return dateAndHour;
   }
 
-  public void setDateAndHour(String dateAndHour) {
+  public void setDateAndHour(Date dateAndHour) {
     this.dateAndHour = dateAndHour;
   }
 
-  public String getReferringDoctor() {
+  public int getReferringDoctor() {
     return referringDoctor;
   }
 
-  public void setReferringDoctor(String referringDoctor) {
+  public void setReferringDoctor(int referringDoctor) {
     this.referringDoctor = referringDoctor;
   }
 
-  public String getDepartment() {
+  public int getDepartment() {
     return department;
   }
 
-  public void setDepartment(String department) {
+  public void setDepartment(int department) {
     this.department = department;
   }
 
@@ -89,11 +91,11 @@ public class OrderOfService {
     this.responsibleUser = responsibleUser;
   }
 
-  public String getInsurance() {
+  public int getInsurance() {
     return insurance;
   }
 
-  public void setInsurance(String insurance) {
+  public void setInsurance(int insurance) {
     this.insurance = insurance;
   }
 }

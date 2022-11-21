@@ -2,24 +2,24 @@ package model;
 
 public class Insurance {
 
-  private String code;
+  private int code;
   private String name;
   
-  public Insurance(String code, String name){
+  public Insurance(int code, String name){
     this.code = code;
     this.name = name;
   }
 
   public Insurance(){
-    this.code = "";
+    this.code = 0;
     this.name = "";
   }
 
-  public String getCode() {
+  public int getCode() {
     return code;
   }
 
-  public void setCode(String code) {
+  public void setCode(int code) {
     this.code = code;
   }
 

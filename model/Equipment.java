@@ -1,13 +1,15 @@
 package model;
 
+import java.sql.Date;
+
 public class Equipment {
 
-  private String number;
-  private String registerDate; 
+  private int number;
+  private Date registerDate; 
   private String name; 
-  private String departmentCode;
+  private int departmentCode;
   
-  public Equipment(String number, String registerDate, String name, String departmentCode){
+  public Equipment(int number, Date registerDate, String name, int departmentCode){
     this.number = number;
     this.registerDate = registerDate;
     this.name = name;
@@ -15,25 +17,25 @@ public class Equipment {
   }
 
   public Equipment(){
-    this.number = "";
-    this.registerDate = "";
+    this.number = 0;
+    this.registerDate = null;
     this.name = "";
-    this.departmentCode = "";
+    this.departmentCode = 0;
   }
 
-  public String getNumber() {
+  public int getNumber() {
     return number;
   }
 
-  public void setNumber(String number) {
+  public void setNumber(int number) {
     this.number = number;
   }
 
-  public String getRegisterDate() {
+  public Date getRegisterDate() {
     return registerDate;
   }
 
-  public void setRegisterDate(String registerDate) {
+  public void setRegisterDate(Date registerDate) {
     this.registerDate = registerDate;
   }
 
@@ -45,11 +47,11 @@ public class Equipment {
     this.name = name;
   }
 
-  public String getDepartmentCode() {
+  public int getDepartmentCode() {
     return departmentCode;
   }
 
-  public void setDepartmentCode(String departmentCode) {
+  public void setDepartmentCode(int departmentCode) {
     this.departmentCode = departmentCode;
   }
   

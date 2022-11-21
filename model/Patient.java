@@ -1,25 +1,27 @@
 package model;
 
+import java.sql.Date;
+
 public class Patient {
-  private String record = ""; // Record numbeR
-  private String recordDate = "";
+  private int record = 0; // Record numbeR
+  private Date recordDate = null;
   private String name = "";
-  private String birthDate = "";
-  private String CPF = "";
-  private String insuranceCode = "";
-  private String phone = "";
+  private Date birthDate = null;
+  private long CPF = 0;
+  private int insuranceCode = 0;
+  private long phone = 0;
 
   public Patient(){
-    this.record = "";
-    this.recordDate = "";
+    this.record = 0;
+    this.recordDate = null;
     this.name = "";
-    this.birthDate = "";
-    this.CPF = "";
-    this.insuranceCode = "";
-    this.phone = "";
+    this.birthDate = null;
+    this.CPF = 0;
+    this.insuranceCode = 0;
+    this.phone = 0;
   }
 
-  public Patient(String record , String recordDate, String name, String birthDate, String CPF, String insuranceCode, String phone){
+  public Patient(int record , Date recordDate, String name, Date birthDate, long CPF, int insuranceCode, long phone){
     this.record = record;
     this.recordDate = recordDate;
     this.name = name;
@@ -29,19 +31,19 @@ public class Patient {
     this.phone = phone;
   }
 
-  public String getRecord() {
+  public int getRecord() {
     return record;
   }
 
-  public void setRecord(String record) {
+  public void setRecord(int record) {
     this.record = record;
   }
 
-  public String getRecordDate() {
+  public Date getRecordDate() {
     return recordDate;
   }
 
-  public void setRecordDate(String recordDate) {
+  public void setRecordDate(Date recordDate) {
     this.recordDate = recordDate;
   }
 
@@ -53,35 +55,35 @@ public class Patient {
     this.name = name;
   }
 
-  public String getBirthDate() {
+  public Date getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(String birthDate) {
+  public void setBirthDate(Date birthDate) {
     this.birthDate = birthDate;
   }
 
-  public String getCPF() {
+  public long getCPF() {
     return CPF;
   }
 
-  public void setCPF(String cPF) {
+  public void setCPF(long cPF) {
     CPF = cPF;
   }
 
-  public String getInsuranceCode() {
+  public int getInsuranceCode() {
     return insuranceCode;
   }
 
-  public void setInsuranceCode(String insuranceCode) {
+  public void setInsuranceCode(int insuranceCode) {
     this.insuranceCode = insuranceCode;
   }
 
-  public String getPhone() {
+  public long getPhone() {
     return phone;
   }
 
-  public void setPhone(String phone) {
+  public void setPhone(long phone) {
     this.phone = phone;
   }
 
