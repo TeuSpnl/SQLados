@@ -31,7 +31,7 @@ public class Equipment implements Initializable{
         
         //register the equipment
         registerButton.setOnAction(Event -> {
-            String name = nameField.getText();
+            String name = nameField.getText().toUpperCase();
             int strCode = Integer.parseInt(codeField.getText());
   
             try {

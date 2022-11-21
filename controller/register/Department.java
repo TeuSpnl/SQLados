@@ -27,8 +27,8 @@ public class Department implements Initializable{
         
         //register the equipment
         registerButton.setOnAction(Event -> {
-            String name = nameField.getText();
-            String respon = entitledField.getText();
+            String name = nameField.getText().toUpperCase();
+            String respon = entitledField.getText().toUpperCase();
   
             try {
                 dao.DepartmentDao.register(name,respon);

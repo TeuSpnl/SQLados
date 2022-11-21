@@ -38,12 +38,11 @@ public class User implements Initializable{
 
         //register the user
         registerButton.setOnAction(Event -> {
-            String name = nameField.getText();
-            String login = loginField.getText();
-            String password = passwordField.getText();
+            String name = nameField.getText().toUpperCase();
+            String login = loginField.getText().toUpperCase();
+            String password = passwordField.getText().toUpperCase();
             int department = Integer.parseInt(departmentField.getText());
             Date birth = Date.valueOf(datePanel.getValue().toString());
-            System.out.println(birth);
             Long cpf = Long.parseLong(CPFfield.getText());
             
     

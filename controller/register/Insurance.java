@@ -24,7 +24,7 @@ public class Insurance implements Initializable{
 
         //register the insurance
         registerButton.setOnAction(Event -> {
-            String name = nameField.getText();
+            String name = nameField.getText().toUpperCase();
   
             try {
                 dao.InsuranceDao.register(name);

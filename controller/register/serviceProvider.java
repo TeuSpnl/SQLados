@@ -35,12 +35,12 @@ public class serviceProvider implements Initializable{
 
         //register the service provider
         registerButton.setOnAction(Event -> {
-            String name = nameField.getText();
+            String name = nameField.getText().toUpperCase();
             int code = Integer.parseInt(codeField.getText());
             Long cpf = Long.parseLong(CPFField.getText());
-            String council = conselhoField.getText();
-            String type = tipoField.getText();
-            String uf = ufField.getText();
+            String council = conselhoField.getText().toUpperCase();
+            String type = tipoField.getText().toUpperCase();
+            String uf = ufField.getText().toUpperCase();
     
             try {
                 dao.ServiceProviderDao.register(code, name, cpf, council, type, uf);
