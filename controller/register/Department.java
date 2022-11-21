@@ -1,10 +1,14 @@
 package controller.register;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class Department {
+public class Department implements Initializable{
 
     @FXML
     private TextField nameField;
@@ -18,4 +22,19 @@ public class Department {
     @FXML
     private TextField entitledField;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        //register the equipment
+        registerButton.setOnAction(Event -> {
+            String name = nameField.getText();
+            String respon = codeField.getText();
+  
+            try {
+                dao.DepartmentDao.register(name,respon);
+            } catch (Exception e) {
+              System.out.println("Try being a better programmer");
+            }
+          });
+    }
 }
