@@ -28,7 +28,7 @@ public class Department implements Initializable{
         //register the equipment
         registerButton.setOnAction(Event -> {
             String name = nameField.getText();
-            String respon = codeField.getText();
+            String respon = entitledField.getText();
   
             try {
                 dao.DepartmentDao.register(name,respon);

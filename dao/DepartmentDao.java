@@ -24,6 +24,7 @@ public class DepartmentDao extends Department {
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e){
+            System.out.println(e.getMessage());
             System.out.println("Error ao Registrar o Departamento!");
         }
     }
