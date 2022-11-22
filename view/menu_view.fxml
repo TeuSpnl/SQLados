@@ -14,7 +14,7 @@
    <children>
       <BorderPane fx:id="borderPane" layoutY="-1.0" prefHeight="720.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="65.0" prefWidth="1264.0" styleClass="menuTopBar" stylesheets="@../css/background.css" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="65.0" prefWidth="1264.0" style="-fx-background-color: #171717;" styleClass="menuTopBar" stylesheets="@../css/background.css" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="menuButton" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: #2d68ff; -fx-background-radius: 100;" textAlignment="CENTER" textFill="WHITE">
                      <font>
