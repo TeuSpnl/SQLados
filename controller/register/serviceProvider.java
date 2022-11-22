@@ -43,7 +43,7 @@ public class serviceProvider implements Initializable{
             String uf = ufField.getText().toUpperCase();
     
             try {
-                dao.serviceProviderDao.register(code, name, cpf, council, type, uf);
+                dao.ServiceProviderDao.register(code, name, cpf, council, type, uf);
             } catch (Exception e) {
               System.out.println("Try being a better programmer");
             }

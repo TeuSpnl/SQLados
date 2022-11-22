@@ -1,5 +1,29 @@
+:root {
+  --register-back: #232323;
+}
 
-back{
-  background-color: #232323
+#loginButton {
+  -fx-background-color: #00ff00;
+  -fx-background-radius: 100;
+}
 
+#loginButton:hover {
+  -fx-background-color: #77ff00;
+}
+
+.menuButton {
+  -fx-background-color: transparent;
+  -fx-cursor: hand;
+}
+
+.menuButton:hover {
+  -fx-background-color: #00000015;
+}
+
+.backRegister {
+  -fx-background-color: --register-back;
+}
+
+.menuTopBar {
+  -fx-background-color: #0094d4;
 }

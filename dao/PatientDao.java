@@ -11,7 +11,7 @@ import model.Patient;
 
 public class PatientDao extends Patient {
 
-  public void register(String name, Date birthDate, long CPF, String insuranceCode, long phone){
+  public static void register(String name, Date birthDate, long CPF, int insuranceCode, long phone){
         String sql = "INSERT INTO PAC (PAC_DTHR_REG,PAC_NOME,PAC_BIRTH,PAC_CPF,PAC_CNV_COD,PAC_TEL)" +
                     "VALUES (current_timestamp,?,?,?,?,?)";
 
@@ -22,7 +22,7 @@ public class PatientDao extends Patient {
                 smt.setString(1,  name);
                 smt.setDate(2, birthDate);
                 smt.setLong(3, CPF);
-                smt.setString(4, insuranceCode);
+                smt.setInt(4, insuranceCode);
                 smt.setLong(5, phone);
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement

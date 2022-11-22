@@ -47,6 +47,7 @@ public class MainController implements Initializable {
   private Scene scene;
   private Parent root;
   private boolean usingPasswordVisible = false;
+  public static String loginGeral;
 
 
   /* (non-Javadoc)
@@ -59,16 +60,6 @@ public class MainController implements Initializable {
        * LOGIN BUTTON METHODS ****************************************************
        * 
        */
-
-      //change the colour of the button when the mouse is over it
-      loginButton.setOnMouseEntered(Event -> {
-        loginButton.setStyle("-fx-background-color: #77ff00;-fx-background-radius: 100;");
-      });
-
-      //change the colour of the button when the mouse is over it
-      loginButton.setOnMouseExited(Event -> {
-        loginButton.setStyle("-fx-background-color: #00FF00;-fx-background-radius: 100;");
-      });
 
       passwordVisible.setOnMouseClicked(Event -> {
         passwordVisible.setVisible(false);
@@ -96,6 +87,7 @@ public class MainController implements Initializable {
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
         String login =  loginField.getText();
+                loginGeral = login;
         String password = usingPasswordVisible ? passwordVisibleField.getText() : passwordField.getText();
         
         try {

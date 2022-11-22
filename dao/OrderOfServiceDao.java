@@ -10,7 +10,7 @@ import model.OrderOfService;
 
 public class OrderOfServiceDao extends OrderOfService {
 
-  public void register(int patientRecord, int referringDoctor, int department, String typeOfservice, String responsibleUser, int insurance){
+  public static void register(int patientRecord, int referringDoctor, int department, String typeOfservice, String responsibleUser, int insurance){
         String sql = "INSERT INTO OS (OS_PAC_REG,OS_DTHR,OS_REQUISITANTE,OS_STR_COD,OS_TIPO_ATEND,OS_USR_RESP,OS_CNV_COD)" +
                     "VALUES (?,current_timestamp,?,?,?,?,?)";
 
