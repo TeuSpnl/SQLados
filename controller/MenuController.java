@@ -80,7 +80,7 @@ public class MenuController implements Initializable {
     /*
      * MENU BUTTON METHODS ****************************************************
      */
-    // menuSlider.setTranslateX(-220);
+    menuSlider.setTranslateX(-220);
     // fatherPane.setTranslateX(-220);
 
     menuButton.setOnAction(event -> {
