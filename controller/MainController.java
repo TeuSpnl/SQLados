@@ -47,6 +47,7 @@ public class MainController implements Initializable {
   private Scene scene;
   private Parent root;
   private boolean usingPasswordVisible = false;
+  public static String loginGeral;
 
 
   /* (non-Javadoc)
@@ -96,6 +97,7 @@ public class MainController implements Initializable {
       //change the scene when the button is clicked
       loginButton.setOnAction(Event -> {
         String login =  loginField.getText();
+                loginGeral = login;
         String password = usingPasswordVisible ? passwordVisibleField.getText() : passwordField.getText();
         
         try {
