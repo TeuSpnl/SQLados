@@ -99,4 +99,8 @@ public class ServiceProviderDao extends ServiceProvider {
         return psv;
     }
 
+    public static ServiceProvider getServiceProvider(String arg) {
+      return null;
+    }
+
 }

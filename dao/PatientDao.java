@@ -68,7 +68,7 @@ public class PatientDao extends Patient {
         return patients;
     }
 
-    public model.Patient getPatient(String record){
+    public static model.Patient getPatient(String record){
         model.Patient pac = new Patient();
         String sql = "SELECT * " +
                     "FROM PAC " +

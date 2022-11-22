@@ -59,22 +59,31 @@ public class PrimaryKey implements Initializable{
                 case 1:
                     System.out.println("Buscar Setor");
                     model.Department d = dao.DepartmentDao.getDepartment(arg);
-                    
+                    listView.getItems().addAll(d.departmentToString());
                     break;
                 case 2:
                     System.out.println("Buscar Equipamento");
+                    model.Equipment e = dao.EquipmentDao.getEquipment(arg);
+                    listView.getItems().addAll(e.equipmentToString());
                     break;
                 case 3:
                     System.out.println("Buscar Convenio");
+                    model.Insurance c = dao.InsuranceDao.getInsurance(arg);
+                    listView.getItems().addAll(c.insuranceToString());
                     break;
                 case 4:
                     System.out.println("Buscar Paciente");
+                    model.Patient p = dao.PatientDao.getPatient(arg);
+                    listView.getItems().addAll(p.patientToString());
                     break;
                 case 5:
                     System.out.println("Buscar Prestador");
+                    model.ServiceProvider pr = dao.ServiceProviderDao.getServiceProvider(arg);
+                    listView.getItems().addAll(pr.serviceProviderToString());
                     break;
                 case 6:
                     System.out.println("Buscar Ordem");
+                    model.OrderOfService o = dao.OrderOfServiceDao.getOS(arg);
                     break;
             }
         });

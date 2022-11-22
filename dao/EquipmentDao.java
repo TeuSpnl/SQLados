@@ -61,7 +61,7 @@ public class EquipmentDao extends Equipment {
         return equipments;
     }
 
-    public model.Equipment getEquipment(String code){
+    public static model.Equipment getEquipment(String code){
         model.Equipment eqp = new Equipment();
         String sql = "SELECT * " +
                     "FROM EQP " +

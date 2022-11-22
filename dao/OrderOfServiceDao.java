@@ -69,7 +69,7 @@ public class OrderOfServiceDao extends OrderOfService {
         return orders;
     }
 
-    public model.OrderOfService getOS(String number){
+    public static model.OrderOfService getOS(String number){
         model.OrderOfService os = new OrderOfService();
         String sql = "SELECT * " +
                     "FROM OS " +
@@ -101,4 +101,5 @@ public class OrderOfServiceDao extends OrderOfService {
 
         return os;
     }
+
 }

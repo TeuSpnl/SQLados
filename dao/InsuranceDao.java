@@ -58,7 +58,7 @@ public class InsuranceDao extends Insurance {
         return insurances;
     }
 
-    public model.Insurance getInsurance(String code){
+    public static model.Insurance getInsurance(String code){
         model.Insurance cnv = new Insurance();
         String sql = "SELECT * " +
                     "FROM CNV " +
