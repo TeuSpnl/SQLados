@@ -61,16 +61,6 @@ public class MainController implements Initializable {
        * 
        */
 
-      //change the colour of the button when the mouse is over it
-      loginButton.setOnMouseEntered(Event -> {
-        loginButton.setStyle("-fx-background-color: #77ff00;-fx-background-radius: 100;");
-      });
-
-      //change the colour of the button when the mouse is over it
-      loginButton.setOnMouseExited(Event -> {
-        loginButton.setStyle("-fx-background-color: #00FF00;-fx-background-radius: 100;");
-      });
-
       passwordVisible.setOnMouseClicked(Event -> {
         passwordVisible.setVisible(false);
         passwordInvisible.setVisible(true);

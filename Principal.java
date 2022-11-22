@@ -53,6 +53,7 @@ public class Principal extends Application {
       root = loader.load();
       scene = new Scene(root);
 
+      scene.getStylesheets().add(getClass().getResource("css/background.css").toExternalForm());
 
       primaryStage.getIcons().add(new Image("img/icon.png"));
       primaryStage.setResizable(false);

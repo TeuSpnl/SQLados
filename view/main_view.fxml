@@ -34,7 +34,7 @@
                   <Image url="@../img/Login/icons8-usuário-homem-com-círculo-30.png" />
                </image>
             </ImageView>
-            <Button fx:id="loginButton" layoutX="225.0" layoutY="536.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="121.0" style="-fx-background-radius: 100; -fx-background-color: #00FF00;" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="225.0" layoutY="536.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="121.0" styleClass="login-button" stylesheets="@../../css/background.css" text="Login" textFill="WHITE">
                <font>
                   <Font name="Roboto Regular" size="20.0" />
                </font>
