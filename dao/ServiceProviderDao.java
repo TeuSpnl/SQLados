@@ -10,11 +10,10 @@ import model.ServiceProvider;
 
 public class ServiceProviderDao extends ServiceProvider {
 
-  public static void register(int code, String name, Long CPF, String council, String type, String UF){
+  public static void register(int code, String name, Long CPF, String council, String type, String UF) throws SQLException {
         String sql = "INSERT INTO PSV " +
                     "VALUES (?,?,?,?,?,?)";
 
-        try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
@@ -27,10 +26,6 @@ public class ServiceProviderDao extends ServiceProvider {
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
-        } catch (SQLException e){
-            System.out.println(e.getMessage());
-            System.out.println("Error ao Registrar o Prestador de Servico!");
-        }
     }
 
     public List<model.ServiceProvider> getAll(){

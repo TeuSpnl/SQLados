@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class ServiceOrder implements Initializable {
 
@@ -28,6 +29,10 @@ public class ServiceOrder implements Initializable {
 
     @FXML
     private TextField registroDoPacienteField;
+
+    @FXML
+    private BorderPane statusPane;
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

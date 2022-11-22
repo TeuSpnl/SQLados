@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class Insurance implements Initializable{
 
@@ -15,6 +16,11 @@ public class Insurance implements Initializable{
 
     @FXML
     private Button registerButton;
+
+    @FXML
+    private BorderPane statusPane;
+
+
     //qualquer coisa
     @Override
     public void initialize(URL location, ResourceBundle resources) {

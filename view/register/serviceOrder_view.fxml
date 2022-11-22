@@ -4,9 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="backRegister" stylesheets="@../../css/background.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.ServiceOrder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.ServiceOrder">
    <children>
       <Label layoutX="260.0" layoutY="90.0" prefHeight="69.0" prefWidth="481.0" text="Nova ordem de serviço" textFill="WHITE">
          <font>
@@ -19,5 +20,6 @@
       <TextField fx:id="codigoDoConvenioField" layoutX="366.0" layoutY="277.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo do convenio" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="medicoRequisitanteField" layoutX="365.0" layoutY="314.0" prefHeight="28.0" prefWidth="270.0" promptText="Medico requisitante" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="registroDoPacienteField" layoutX="366.0" layoutY="352.0" prefHeight="28.0" prefWidth="270.0" promptText="Registro do paciente" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="786.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

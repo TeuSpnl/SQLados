@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class Patient implements Initializable{
 
@@ -29,6 +30,9 @@ public class Patient implements Initializable{
 
     @FXML
     private TextField codigoConvenioField;
+
+    @FXML
+    private BorderPane statusPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

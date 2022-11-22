@@ -12,11 +12,10 @@ import model.User;
 
 public class UserDao extends User {
 
-  public static void register(String login, String password, String name, int sector, Date birth, Long CPF){
+  public static void register(String login, String password, String name, int sector, Date birth, Long CPF) throws SQLException {
         String sql = "INSERT INTO USR " +
                     "VALUES (?,?,?,?,?,?);";
 
-        try{
             Connection con = ConnectionFactory.getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
 
@@ -29,10 +28,6 @@ public class UserDao extends User {
             smt.executeUpdate(); // Executa Comando no SQL
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
-        } catch (SQLException e){
-            System.out.println(e.getMessage());
-            System.out.println("Error ao Registrar o Usuario!");
-        }
     }
 
     public static List<model.User> getAll(){

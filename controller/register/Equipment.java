@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class Equipment implements Initializable{
 
@@ -23,6 +24,9 @@ public class Equipment implements Initializable{
     @FXML
     private Button registerButton;
 
+    @FXML
+    private BorderPane statusPane;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
@@ -30,8 +34,9 @@ public class Equipment implements Initializable{
         registerButton.setOnAction(Event -> {
             String name = nameField.getText().toUpperCase();
             int strCode = Integer.parseInt(codeField.getText());
+  
             try {
-                dao.EquipmentDao.register(name,strCode);
+              dao.EquipmentDao.register(name,strCode);
             } catch (Exception e) {
               System.out.println("Try being a better programmer");
             }

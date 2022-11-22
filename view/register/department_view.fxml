@@ -4,9 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="backRegister" stylesheets="@../../css/background.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.Department">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.Department">
    <children>
       <Label layoutX="379.0" layoutY="127.0" prefHeight="49.0" prefWidth="247.0" text="Novo setor" textFill="WHITE">
          <font>
@@ -16,5 +17,6 @@
       <TextField fx:id="nameField" layoutX="368.0" layoutY="206.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <Button fx:id="registerButton" layoutX="453.0" layoutY="399.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
       <TextField fx:id="entitledField" layoutX="368.0" layoutY="244.0" prefHeight="28.0" prefWidth="270.0" promptText="Responsavel" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="781.0" layoutY="33.0" prefHeight="173.0" prefWidth="173.0" />
    </children>
 </AnchorPane>

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.serviceProvider">
@@ -20,5 +21,6 @@
       <TextField fx:id="conselhoField" layoutX="367.0" layoutY="315.0" prefHeight="28.0" prefWidth="270.0" promptText="Conselho" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="tipoField" layoutX="367.0" layoutY="357.0" prefHeight="28.0" prefWidth="270.0" promptText="Tipo" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="ufField" layoutX="367.0" layoutY="397.0" prefHeight="28.0" prefWidth="270.0" promptText="UF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="788.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

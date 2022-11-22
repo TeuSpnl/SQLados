@@ -5,10 +5,13 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 public class User implements Initializable{
 
@@ -33,6 +36,9 @@ public class User implements Initializable{
     @FXML
     private Button registerButton;
 
+    @FXML
+    private BorderPane statusPane;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -47,7 +53,9 @@ public class User implements Initializable{
             
     
             try {
-                dao.UserDao.register(login, password, name, department, birth, cpf);
+              dao.UserDao.register(login, password, name, department, birth, cpf);
+              AnchorPane status = FXMLLoader.load(getClass().getResource("/view/vanilla/ok.fxml"));
+              statusPane.setCenter(status);
             } catch (Exception e) {
               System.out.println("Try being a better programmer");
             }
