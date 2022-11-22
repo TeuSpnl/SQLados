@@ -30,7 +30,6 @@ public class Equipment implements Initializable{
         registerButton.setOnAction(Event -> {
             String name = nameField.getText().toUpperCase();
             int strCode = Integer.parseInt(codeField.getText());
-  
             try {
                 dao.EquipmentDao.register(name,strCode);
             } catch (Exception e) {
