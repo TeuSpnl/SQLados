@@ -51,14 +51,25 @@ public class User implements Initializable{
             Date birth = Date.valueOf(datePanel.getValue().toString());
             Long cpf = Long.parseLong(CPFfield.getText());
             
-    
+            AnchorPane status = null;
+
             try {
               dao.UserDao.register(login, password, name, department, birth, cpf);
-              AnchorPane status = FXMLLoader.load(getClass().getResource("/view/vanilla/ok.fxml"));
-              statusPane.setCenter(status);
+              try {
+                status = FXMLLoader.load(getClass().getResource("/view/vanilla/ok.fxml"));
+              } catch (Exception c) {
+                System.out.println("Board could not be displayed");
+              }
             } catch (Exception e) {
+
               System.out.println("Try being a better programmer");
+              try {
+                status = FXMLLoader.load(getClass().getResource("/view/vanilla/erro.fxml"));
+              } catch (Exception c) {
+                System.out.println("Board could not be displayed");
+              }
             }
+            statusPane.setCenter(status);
           });
     }
 

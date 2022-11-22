@@ -21,7 +21,7 @@
 }
 
 .backRegister {
-  -fx-background-color: --register-back;
+  -fx-background-color: #232323;
 }
 
 .menuTopBar {
