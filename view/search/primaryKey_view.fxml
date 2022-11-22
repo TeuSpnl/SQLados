@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.search.PrimaryKey">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1001.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.search.PrimaryKey">
    <children>
       <TextField fx:id="codeField" layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="580.0" promptText="Chave primaria" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <Button fx:id="registerButton" layoutX="496.0" layoutY="54.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Buscar" textFill="#050505" />

@@ -74,6 +74,7 @@ public class ServiceProvider {
     UF = uF;
   }
 
+  //this method is used to show the information of the service provider in the table
   public String[] serviceProviderToString(){
     String[] s = new String[6];
     s[0] = "Codigo: " + Integer.toString(this.code);

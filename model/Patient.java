@@ -87,6 +87,7 @@ public class Patient {
     this.phone = phone;
   }
 
+  
   public String[] patientToString(){
     String[] s = new String[7];
     s[0] = "Numero do prontuario: " + Integer.toString(this.record);
