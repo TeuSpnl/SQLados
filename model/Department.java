@@ -42,5 +42,12 @@ public class Department {
         this.responsible = responsible;
     } 
 
+    public String[] departmentToString(){
+        String[] s = new String[3];
+        s[0] = "Codigo: " + Integer.toString(this.code);
+        s[1] = "Nome: " + this.name;
+        s[2] = "Responsavel: " + this.responsible;
+        return s;
+    }
     
 }

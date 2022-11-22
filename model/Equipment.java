@@ -54,5 +54,14 @@ public class Equipment {
   public void setDepartmentCode(int departmentCode) {
     this.departmentCode = departmentCode;
   }
+
+  public String[] equipmentToString(){
+    String[] s = new String[4];
+    s[0] = "Numero: " + Integer.toString(this.number);
+    s[1] = "Data de Registro: " + this.registerDate.toString();
+    s[2] = "Nome: " + this.name;
+    s[3] = "Codigo do Setor: " + Integer.toString(this.departmentCode);
+    return s;
+  }
   
 }

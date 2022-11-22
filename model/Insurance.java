@@ -31,4 +31,10 @@ public class Insurance {
     this.name = name;
   }
   
+  public String[] insuranceToString(){
+    String[] s = new String[2];
+    s[0] = "Codigo: " + Integer.toString(this.code);
+    s[1] = "Nome: " + this.name;
+    return s;
+  }
 }

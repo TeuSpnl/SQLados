@@ -61,7 +61,7 @@ public class DepartmentDao extends Department {
         return departaments;
     }
 
-    public model.Department getDepartment(String code){
+    public static model.Department getDepartment(String code){
         model.Department str = new Department();
         String sql = "SELECT * " +
                     "FROM STR " +

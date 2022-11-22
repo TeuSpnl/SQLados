@@ -87,5 +87,16 @@ public class Patient {
     this.phone = phone;
   }
 
+  public String[] patientToString(){
+    String[] s = new String[7];
+    s[0] = "Numero do prontuario: " + Integer.toString(this.record);
+    s[1] = "Data de registro: " + this.recordDate.toString();
+    s[2] = "Nome: " + this.name;
+    s[3] = "Data de nascimento: " + this.birthDate.toString();
+    s[4] = "CPF: " + Long.toString(this.CPF);
+    s[5] = "Codigo do plano de saude: " + Integer.toString(this.insuranceCode);
+    s[6] = "Telefone: " + Long.toString(this.phone);
+    return s;
+  }
   
 }

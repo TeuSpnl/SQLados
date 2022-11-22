@@ -98,4 +98,17 @@ public class OrderOfService {
   public void setInsurance(int insurance) {
     this.insurance = insurance;
   }
+
+  public String[] orderOfServiceToString(){
+    String[] s = new String[8];
+    s[0] = "Numero: " + Integer.toString(this.Number);
+    s[1] = "Numero do prontuario: " + Integer.toString(this.patientRecord);
+    s[2] = "Data e hora: " + this.dateAndHour.toString();
+    s[3] = "Numero do medico encaminhante: " + Integer.toString(this.referringDoctor);
+    s[4] = "Numero do departamento: " + Integer.toString(this.department);
+    s[5] = "Tipo de servico: " + this.typeOfservice;
+    s[6] = "Usuario responsavel: " + this.responsibleUser;
+    s[7] = "Numero do seguro: " + Integer.toString(this.insurance);
+    return s;
+  }
 }
