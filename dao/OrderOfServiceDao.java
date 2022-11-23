@@ -68,7 +68,7 @@ public class OrderOfServiceDao extends OrderOfService {
         return orders;
     }
 
-    public static model.OrderOfService getOS(String number) {
+    public static model.OrderOfService getOS(int number) {
         model.OrderOfService os = new OrderOfService();
         String sql = "SELECT * " +
                 "FROM OS " +
@@ -79,8 +79,9 @@ public class OrderOfServiceDao extends OrderOfService {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, number.toUpperCase());
+            smt.setInt(1, number);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             os.setNumber(rs.getInt("OS_NUMERO"));
             os.setPatientRecord(rs.getInt("OS_PAC_REG"));

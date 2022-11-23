@@ -54,7 +54,7 @@ public class InsuranceDao extends Insurance {
         return insurances;
     }
 
-    public static model.Insurance getInsurance(String code) {
+    public static model.Insurance getInsurance(int code) {
         model.Insurance cnv = new Insurance();
         String sql = "SELECT * " +
                 "FROM CNV " +
@@ -65,8 +65,9 @@ public class InsuranceDao extends Insurance {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, code.toUpperCase());
+            smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             cnv.setCode(rs.getInt("CNV_COD"));
             cnv.setName(rs.getString("CNV_NOME"));

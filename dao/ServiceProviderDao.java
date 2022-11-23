@@ -63,7 +63,7 @@ public class ServiceProviderDao extends ServiceProvider {
         return services;
     }
 
-    public model.ServiceProvider getPSV(String code){
+    public static model.ServiceProvider getPSV(int code){
         model.ServiceProvider psv = new ServiceProvider();
         String sql = "SELECT * " +
                     "FROM PSV " +
@@ -74,8 +74,9 @@ public class ServiceProviderDao extends ServiceProvider {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
             
-            smt.setString(1, code.toUpperCase());
+            smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
                 psv.setCode(rs.getInt("PSV_COD"));
                 psv.setName(rs.getString("PSV_NOME"));
@@ -93,9 +94,4 @@ public class ServiceProviderDao extends ServiceProvider {
 
         return psv;
     }
-
-    public static ServiceProvider getServiceProvider(String arg) {
-      return null;
-    }
-
 }

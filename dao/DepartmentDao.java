@@ -56,7 +56,7 @@ public class DepartmentDao extends Department {
         return departaments;
     }
 
-    public static model.Department getDepartment(String code) {
+    public static model.Department getDepartment(int code) {
         model.Department str = new Department();
         String sql = "SELECT * " +
                 "FROM STR " +
@@ -67,8 +67,9 @@ public class DepartmentDao extends Department {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, code);
+            smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             str.setCode(rs.getInt("STR_COD"));
             str.setName(rs.getString("STR_NOME"));
@@ -79,6 +80,7 @@ public class DepartmentDao extends Department {
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e) {
             System.out.println("Error ao Buscar o Setor!");
+            System.out.println(e.getMessage());
         }
 
         return str;
