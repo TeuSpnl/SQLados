@@ -59,7 +59,7 @@ public class EquipmentDao extends Equipment {
         return equipments;
     }
 
-    public static model.Equipment getEquipment(String code) {
+    public static model.Equipment getEquipment(int code) {
         model.Equipment eqp = new Equipment();
         String sql = "SELECT * " +
                 "FROM EQP " +
@@ -70,7 +70,7 @@ public class EquipmentDao extends Equipment {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, code.toUpperCase());
+            smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
             eqp.setNumber(rs.getInt("EQP_NUMERO"));

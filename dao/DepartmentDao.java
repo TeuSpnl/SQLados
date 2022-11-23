@@ -56,7 +56,7 @@ public class DepartmentDao extends Department {
         return departaments;
     }
 
-    public static model.Department getDepartment(String code) {
+    public static model.Department getDepartment(int code) {
         model.Department str = new Department();
         String sql = "SELECT * " +
                 "FROM STR " +
@@ -67,7 +67,7 @@ public class DepartmentDao extends Department {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, code.toUpperCase());
+            smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
             str.setCode(rs.getInt("STR_CODE"));

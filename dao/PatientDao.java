@@ -65,7 +65,7 @@ public class PatientDao extends Patient {
         return patients;
     }
 
-    public static model.Patient getPatient(String record) {
+    public static model.Patient getPatient(int record) {
         model.Patient pac = new Patient();
         String sql = "SELECT * " +
                 "FROM PAC " +
@@ -76,7 +76,7 @@ public class PatientDao extends Patient {
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
-            smt.setString(1, record.toUpperCase());
+            smt.setInt(1, record);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
             pac.setRecord(rs.getInt("PAC_REG"));
