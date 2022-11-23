@@ -76,6 +76,7 @@ public class ServiceProviderDao extends ServiceProvider {
             
             smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
                 psv.setCode(rs.getInt("PSV_COD"));
                 psv.setName(rs.getString("PSV_NOME"));

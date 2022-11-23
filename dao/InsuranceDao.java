@@ -67,6 +67,7 @@ public class InsuranceDao extends Insurance {
 
             smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             cnv.setCode(rs.getInt("CNV_COD"));
             cnv.setName(rs.getString("CNV_NOME"));

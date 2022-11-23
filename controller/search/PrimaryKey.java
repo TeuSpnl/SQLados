@@ -84,6 +84,7 @@ public class PrimaryKey implements Initializable{
                 case 6:
                     System.out.println("Buscar Ordem");
                     model.OrderOfService o = dao.OrderOfServiceDao.getOS(Integer.parseInt(arg));
+                    listView.getItems().addAll(o.orderOfServiceToString());
                     break;
             }
         });

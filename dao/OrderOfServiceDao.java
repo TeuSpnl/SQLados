@@ -81,6 +81,7 @@ public class OrderOfServiceDao extends OrderOfService {
 
             smt.setInt(1, number);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             os.setNumber(rs.getInt("OS_NUMERO"));
             os.setPatientRecord(rs.getInt("OS_PAC_REG"));

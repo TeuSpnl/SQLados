@@ -78,6 +78,7 @@ public class PatientDao extends Patient {
 
             smt.setInt(1, record);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             pac.setRecord(rs.getInt("PAC_REG"));
             pac.setRecordDate(rs.getDate("PAC_DTHR_REG"));

@@ -72,6 +72,7 @@ public class EquipmentDao extends Equipment {
 
             smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
             eqp.setNumber(rs.getInt("EQP_NUMERO"));
             eqp.setRegisterDate(rs.getDate("EQP_DTHR_REGISTRO"));

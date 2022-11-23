@@ -69,8 +69,9 @@ public class DepartmentDao extends Department {
 
             smt.setInt(1, code);
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
 
-            str.setCode(rs.getInt("STR_CODE"));
+            str.setCode(rs.getInt("STR_COD"));
             str.setName(rs.getString("STR_NOME"));
             str.setResponsible(rs.getString("STR_RESP"));
 
@@ -78,7 +79,8 @@ public class DepartmentDao extends Department {
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
         } catch (SQLException e) {
-            System.out.println("Error ao Buscar o Equipamento!");
+            System.out.println("Error ao Buscar o Setor!");
+            System.out.println(e.getMessage());
         }
 
         return str;
