@@ -4,9 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="backRegister" stylesheets="@../../css/background.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.ServiceOrder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1001.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.ServiceOrder">
    <children>
       <Label layoutX="260.0" layoutY="90.0" prefHeight="69.0" prefWidth="481.0" text="Nova ordem de serviço" textFill="WHITE">
          <font>
@@ -14,10 +15,11 @@
          </font>
       </Label>
       <TextField fx:id="typeField" layoutX="366.0" layoutY="199.0" prefHeight="28.0" prefWidth="270.0" promptText="Tipo de atendimento" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="451.0" layoutY="503.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
+      <Button fx:id="registerButton" styleClass="registerButton" stylesheets="@../../css/background.css" layoutX="451.0" layoutY="503.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" text="Registrar" textFill="#050505" />
       <TextField fx:id="departmentField" layoutX="366.0" layoutY="236.0" prefHeight="28.0" prefWidth="270.0" promptText="Setor" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="codigoDoConvenioField" layoutX="366.0" layoutY="277.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo do convenio" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="medicoRequisitanteField" layoutX="365.0" layoutY="314.0" prefHeight="28.0" prefWidth="270.0" promptText="Medico requisitante" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="registroDoPacienteField" layoutX="366.0" layoutY="352.0" prefHeight="28.0" prefWidth="270.0" promptText="Registro do paciente" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="786.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

@@ -10,37 +10,33 @@ import model.Insurance;
 
 public class InsuranceDao extends Insurance {
 
-  public static void register(String name){
+    public static void register(String name) throws SQLException {
         String sql = "INSERT INTO CNV (CNV_NOME) " +
-                    "VALUES (?)";
+                "VALUES (?)";
 
-        try{
-            Connection con = ConnectionFactory.getConnection();
-            PreparedStatement smt = con.prepareStatement(sql);
+        Connection con = ConnectionFactory.getConnection();
+        PreparedStatement smt = con.prepareStatement(sql);
 
-            smt.setString(1, name);
-            smt.executeUpdate(); // Executa Comando no SQL
-            smt.close(); // Finaliza o PreparedStatement
-            con.close(); // Finaliza a Conexão com o BD
-        } catch (SQLException e){
-            System.out.println("Error ao Registrar o Equipamento!");
-        }
+        smt.setString(1, name);
+        smt.executeUpdate(); // Executa Comando no SQL
+        smt.close(); // Finaliza o PreparedStatement
+        con.close(); // Finaliza a Conexão com o BD
     }
 
-    public List<model.Insurance> getAll(){
+    public List<model.Insurance> getAll() {
         List<model.Insurance> insurances = null;
         String sql = "SELECT * " +
-                    "FROM CNV";
+                "FROM CNV";
 
-        try{
+        try {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
 
             rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-            if(rs!=null){
-                while(rs.next()){
+            if (rs != null) {
+                while (rs.next()) {
                     model.Insurance i = new Insurance();
                     i.setCode(rs.getInt("CNV_COD"));
                     i.setName(rs.getString("CNV_NOME"));
@@ -51,34 +47,35 @@ public class InsuranceDao extends Insurance {
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Error ao Buscar Todos os Convenios!");
         }
 
         return insurances;
     }
 
-    public model.Insurance getInsurance(String code){
+    public static model.Insurance getInsurance(int code) {
         model.Insurance cnv = new Insurance();
         String sql = "SELECT * " +
-                    "FROM CNV " +
-                    "WHERE CNV_COD = ?";
+                "FROM CNV " +
+                "WHERE CNV_COD = ?";
 
-        try{
+        try {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement smt = con.prepareStatement(sql);
             ResultSet rs;
-            
-            smt.setString(1, code.toUpperCase());
-            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
 
-                cnv.setCode(rs.getInt("CNV_COD"));
-                cnv.setName(rs.getString("CNV_NOME"));
+            smt.setInt(1, code);
+            rs = smt.executeQuery(); // Executa Comando no SQL e rs recebe os valores
+            rs.next();
+
+            cnv.setCode(rs.getInt("CNV_COD"));
+            cnv.setName(rs.getString("CNV_NOME"));
 
             rs.close(); // Finaliza os dados da Query
             smt.close(); // Finaliza o PreparedStatement
             con.close(); // Finaliza a Conexão com o BD
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Error ao Buscar o Convenio!");
         }
 

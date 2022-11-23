@@ -5,9 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="backRegister" stylesheets="@../../css/background.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.Patient">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1001.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.Patient">
    <children>
       <Label layoutX="250.0" layoutY="68.0" prefHeight="75.0" prefWidth="502.0" text="Registrar novo Paciente" textFill="WHITE">
          <font>
@@ -16,9 +17,10 @@
       </Label>
       <TextField fx:id="nameField" layoutX="365.0" layoutY="185.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="CPFfield" layoutX="365.0" layoutY="226.0" prefHeight="28.0" prefWidth="270.0" promptText="CPF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="452.0" layoutY="416.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
+      <Button fx:id="registerButton" styleClass="registerButton" stylesheets="@../../css/background.css" layoutX="452.0" layoutY="416.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" textFill="#050505" />
       <DatePicker fx:id="birthField" layoutX="366.0" layoutY="348.0" prefHeight="28.0" prefWidth="270.0" promptText="Data de nascimento" />
       <TextField fx:id="telefoneField" layoutX="365.0" layoutY="268.0" prefHeight="28.0" prefWidth="270.0" promptText="Telefone" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="codigoConvenioField" layoutX="366.0" layoutY="305.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo do convenio" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="786.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

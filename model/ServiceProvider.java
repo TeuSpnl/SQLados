@@ -73,5 +73,17 @@ public class ServiceProvider {
   public void setUF(String uF) {
     UF = uF;
   }
+
+  //this method is used to show the information of the service provider in the table
+  public String[] serviceProviderToString(){
+    String[] s = new String[6];
+    s[0] = "Codigo: " + Integer.toString(this.code);
+    s[1] = "Nome: " + this.name;
+    s[2] = "CPF: " + Long.toString(this.CPF);
+    s[3] = "Conselho: " + this.council;
+    s[4] = "Tipo: " + this.type;
+    s[5] = "UF: " + this.UF;
+    return s;
+  }
   
 }

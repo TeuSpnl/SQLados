@@ -4,9 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="backRegister" stylesheets="@../../css/background.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.ServiceProvider">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1000.0" styleClass="backRegister" stylesheets="@../../css/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.register.serviceProvider">
    <children>
       <Label layoutX="212.0" layoutY="93.0" prefHeight="75.0" prefWidth="576.0" text="Novo  Prestador de serviço" textFill="WHITE">
          <font>
@@ -15,10 +16,11 @@
       </Label>
       <TextField fx:id="nameField" layoutX="367.0" layoutY="234.0" prefHeight="28.0" prefWidth="270.0" promptText="Nome" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="codeField" layoutX="367.0" layoutY="195.0" prefHeight="28.0" prefWidth="270.0" promptText="Codigo" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
-      <Button fx:id="registerButton" layoutX="453.0" layoutY="456.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Registrar" textFill="#050505" />
+      <Button fx:id="registerButton" styleClass="registerButton" stylesheets="@../../css/background.css" layoutX="453.0" layoutY="456.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" text="Registrar" textFill="#050505" />
       <TextField fx:id="CPFField" layoutX="367.0" layoutY="277.0" prefHeight="28.0" prefWidth="270.0" promptText="CPF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="conselhoField" layoutX="367.0" layoutY="315.0" prefHeight="28.0" prefWidth="270.0" promptText="Conselho" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="tipoField" layoutX="367.0" layoutY="357.0" prefHeight="28.0" prefWidth="270.0" promptText="Tipo" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
       <TextField fx:id="ufField" layoutX="367.0" layoutY="397.0" prefHeight="28.0" prefWidth="270.0" promptText="UF" style="-fx-background-radius: ; -fx-background-color: white; -fx-border-color: white;" />
+      <BorderPane fx:id="statusPane" layoutX="788.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

@@ -22,9 +22,14 @@
 }
 
 .backRegister {
-  -fx-background-color: #0094d4;
+  -fx-background-color: #232323;
 }
 
-.menuTopBar {
-  -fx-background-color: #0C6DEB;
+.registerButton{
+  -fx-background-color: white;
+  -fx-background-radius: 100;
+}
+
+.registerButton:hover {
+  -fx-background-color: #ffffffbe;
 }

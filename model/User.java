@@ -87,5 +87,16 @@ public class User{
   public void setCPF(long cPF) {
     CPF = cPF;
   }
+  //This method is used to return the user's data in a String array
+  public String[] userToString(){
+    String[] user = new String[6];
+    user[0] = "Login: " + this.login;
+    user[1] = "Senha: " + this.password;
+    user[2] = "Nome: " + this.name;
+    user[3] = "Cod_dep: " + Integer.toString(this.department);
+    user[4] = "Aniversario: " + this.birthDate.toString();
+    user[5] = "CPF: " + Long.toString(this.CPF);
+    return user;
+  }
   
 }
