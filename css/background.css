@@ -2,13 +2,14 @@
   --register-back: #232323;
 }
 
-#loginButton {
-  -fx-background-color: #00ff00;
+.importantButton {
+  -fx-background-color: #0efc79;
   -fx-background-radius: 100;
+  -fx-text-fill: black;
 }
 
-#loginButton:hover {
-  -fx-background-color: #77ff00;
+.importantButton:hover {
+  -fx-background-color: #0efc79d5;
 }
 
 .menuButton {
@@ -21,9 +22,9 @@
 }
 
 .backRegister {
-  -fx-background-color: --register-back;
+  -fx-background-color: #0094d4;
 }
 
 .menuTopBar {
-  -fx-background-color: #0094d4;
+  -fx-background-color: #0C6DEB;
 }
